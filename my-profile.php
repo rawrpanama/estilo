@@ -16,8 +16,8 @@ $result = $con->query($consulta);
         <div class="row">
           <h3 class="flow-text">Bienvenido, <?php while($row = mysqli_fetch_array($result)){echo $row['usuario'];}?></h3>
           <div class="col s4"><a class="waves-effect waves-light btn-large z-depth-5" href="u-upd-dat.php">Modificar mis datos</a></div>
-          <div class="col s4"><a class="waves-effect waves-blue btn-large cyan lighten-2 z-depth-5" href="ad-new-user.php">Ver muebles ordenados</a></div>
-          <div class="col s4"><a class="waves-effect waves-blue btn-large blue darken-4 z-depth-5" href="ad-new-material.php">Ponerse en contacto</a></div>
+          <div class="col s4"><a class="waves-effect waves-blue btn-large cyan lighten-2 z-depth-5" href="#">Ver muebles ordenados</a></div>
+          <div class="col s4"><a class="waves-effect waves-blue btn-large blue darken-4 z-depth-5" href="#">Ponerse en contacto</a></div>
         </div>
       </div>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
