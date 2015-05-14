@@ -4,7 +4,7 @@
 
 	if($_POST['Caso']=="Eliminar"){
 		mysql_query("DELETE FROM usuario WHERE iduser=".$_POST['Id']);
-		echo 'The user has been deleted';
+		echo 'El usuario ha sido eliminado';
 	}
 	if($_POST['Caso']=="Modificar"){
        /* $sql = "SELECT count(*) FROM usuario WHERE usuario ='".$_POST['User'];
@@ -20,7 +20,7 @@
             mysql_query("update usuario set telefono='".$_POST['Telefono']."' where iduser=".$_POST['Id']);
             mysql_query("update usuario set dui='".$_POST['Dui']."' where iduser=".$_POST['Id']);
             mysql_query("update usuario set tipo='".$_POST['Tipo']."' where iduser=".$_POST['Id']);
-            echo 'The user has been changed';
+            echo 'El usuario ha sido modificado';
         /*}else{
             echo "El usuario que se trato de ingresar ya existe, ningún cambio ha sido realizado.";
         }*/

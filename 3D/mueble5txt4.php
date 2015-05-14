@@ -1,13 +1,17 @@
+<?php
+session_start();
+if (isset($_SESSION['suser'])) {
+  $id = $_SESSION['suser'];
+?>		       
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Personalizar</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="css/materialize.min.css">
-       
+		<?php include("../3navbar.html");?>
 	</head>
 	<body>
+		
+
         <div id="container"></div>
         <script src="build/three.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
@@ -25,7 +29,7 @@
 		        //******************************************************************************************************
 		        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
 		        
-		        camera.position.z=200;
+		        camera.position.z=250;
 		     function onWindowResize() {
 
 				windowHalfX = window.innerWidth / 2;
@@ -37,6 +41,8 @@
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 			}
+
+				
 		        //******************************************************************************************************
 		        controls = new THREE.TrackballControls(camera);
 		        controls.movementSpeed = 200;
@@ -56,9 +62,9 @@
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('textura6.png') });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura4.png') });
 		        loader = new THREE.JSONLoader();
-		        loader.load('closeth.js', function (geometry) {
+		        loader.load(' bookcase-.js', function (geometry) {
 		            mesh = new THREE.Mesh(geometry, cuboMaterial);
 		            mesh.scale.z = 25;
 		            mesh.scale.x = 25;
@@ -79,8 +85,14 @@
 		        controls.update(.01);
 		        renderer.render(scene, camera);
 		    }
+		   
 
 		</script>
        
 	</body>
 </html>
+<?php
+}else{
+  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+}
+  ?>

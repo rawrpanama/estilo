@@ -1,61 +1,55 @@
+<?php
+session_start();
+if (isset($_SESSION['suser'])) {
+  $id = $_SESSION['suser'];
+$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
+$consulta = 'SELECT * FROM material';
+$result = $con->query($consulta);
+$i = 1;
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<title>Personalizar</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="css/materialize.min.css">
-       
+		<?php include("../3navbar.html");?>
 	</head>
 	<body>
-			<nav class="navbar navbar-default" role="navigation">
-   <div class="navbar-header" align="center">
-   	Personaliza tu propio mueble
-   </div>
-   <div>
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>Texturas</a>
-               <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble2.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble2txt1.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble2txt2.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble2txt8.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-
-            </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
-
-			<nav class="navbar navbar-default" role="navigation">
-   <div>
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>Colores</a>	
-               <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color1</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color2</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color3</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color4</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color5</a></li>
-            </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
-
+		<nav class="navbar navbar-default">
+		    <div>
+		      <ul class="nav navbar-nav">
+		         <li>
+		             <p class="flow-text black-text center">Texturas</p>
+		            <ul >
+		            	<?php while ($row = mysqli_fetch_array($result)) {
+		            		$i = $i + 1;
+		            		?>
+		                <a id="<?php echo "$i";?>" onclick='cambiar(<?php echo "$i" ?>)'><img class="responsive-img" src="<?php echo $row['img']; ?>" style="widht: 25px; Height: 50px;"></a>
+		                <!--<a href="mueble1txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
+		                <a href="mueble1txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
+		                <a href="mueble1txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
+		                <a href=""><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>-->
+		                 <?php } ?>
+		            </ul>
+		         </li>
+		      </ul>
+		   </div>
+		</nav>
+        
         <div id="container"></div>
+
         <script src="build/three.js"></script>
+        <script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../js/inicio.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
 		<script>
+		var dir = "../img/materiales/textura3.png";
+		function cambiar(txt){
+			//alert(txt);
+			dir = "../img/materiales/textura"+txt+".png";
+			//alert(dir);
+		}
+
 		    var container, stats;
 		    var camera, controls, scene, renderer;
 
@@ -69,7 +63,7 @@
 		        //******************************************************************************************************
 		        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
 		        
-		        camera.position.z=100;
+		        camera.position.z=500;
 		     function onWindowResize() {
 
 				windowHalfX = window.innerWidth / 2;
@@ -100,14 +94,16 @@
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('textura6.png') });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture(dir) });
+		        cuboMaterial.needsUpdate=true;
 		        loader = new THREE.JSONLoader();
-		        loader.load('Cabinets.js', function (geometry) {
+		        loader.load('Gabinetes.js', function (geometry) {
 		            mesh = new THREE.Mesh(geometry, cuboMaterial);
 		            mesh.scale.z = 25;
 		            mesh.scale.x = 25;
 		            mesh.scale.y = 25;
 		            mesh.id = "sillon";
+		            mesh.needsUpdate=true;
 		            scene.add(mesh);
 		        });
 
@@ -128,3 +124,8 @@
        
 	</body>
 </html>
+ <?php
+}else{
+  echo '<script> alert("Usuario no autenticado"); location.href = "../index.php"; </script>';
+}
+  ?>

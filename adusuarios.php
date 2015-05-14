@@ -46,13 +46,13 @@ include('navbar.html');
       <tr>
         <td><input type="hidden" value="<?php echo $row['iduser'];?>"><?php echo $row['iduser'];?></td>
         <td><input type="text" id="user" value="<?php echo $row['usuario'];?>"></td>
-        <td><input type="text" id="name" value="<?php echo $row['nombre'];?>" onkeypress="return letras(event)"></td>
-        <td><input type="text" id="ape" value="<?php echo $row['apellido'];?>" onkeypress="return letras(event)"></td>
+        <td><input type="text" id="name" value="<?php echo $row['nombre'];?>" onkeypress="return letras(event)" maxlength="20"></td>
+        <td><input type="text" id="ape" value="<?php echo $row['apellido'];?>" onkeypress="return letras(event)" maxlength="20"></td>
         <td><input type="text" id="pass" value="<?php echo $row['contra'];?>"></td>
         <td><input type="text" id="mail" value="<?php echo $row['correo'];?>"></td>
-        <td><input type="text" id="tel" value="<?php echo $row['telefono'];?>" onkeypress="return num(event)"></td>
-        <td><input type="text" id="dui" value="<?php echo $row['dui'];?>" onkeypress="return num(event)"></td>
-        <td><input type="text" id="tipo" value="<?php echo $row['tipo'];?>"></td>
+        <td><input type="text" id="tel" value="<?php echo $row['telefono'];?>" onkeypress="return num(event)" maxlength="8"></td>
+        <td><input type="text" id="dui" value="<?php echo $row['dui'];?>" onkeypress="return num(event)" maxlength="9"></td>
+        <td><input type="text" id="tipo" value="<?php echo $row['tipo'];?>" class="btn-flat disabled "></td>
         <td><button class="eliminar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Borrar</button></td>
         <td><button class="modificar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Modificar</button></td>
         <?php } ?>

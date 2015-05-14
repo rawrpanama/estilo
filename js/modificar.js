@@ -1,4 +1,4 @@
-document.ready(function(){
+$(document).ready(function(){
 	$(".eliminar").click(function(){
 		$(this).parent('td').parent('tr').remove();
 		$.post('js/ejecutar.php',{

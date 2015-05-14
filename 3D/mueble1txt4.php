@@ -1,57 +1,15 @@
+<?php
+session_start();
+if (isset($_SESSION['suser'])) {
+  $id = $_SESSION['suser'];
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<title>Personalizar</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="../css/materialize.css">
-       
+		<?php include("../3navbar.html");?>
 	</head>
 	<body>
-
-		<nav class="navbar navbar-default" role="navigation">
-   <div class="navbar-header" align="center">
-   	Personaliza tu propio mueble
-   </div>
-   <div>
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>Texturas</a>
-               <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                 <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble1.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a  class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble1txt4.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble1txt5.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-               <li><img class="responsive-img" src="textura3.jpeg"><a href="mueble1txt6.html" class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i></a></li>
-
-            </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
-
-			<nav class="navbar navbar-default" role="navigation">
-   <div>
-      <ul class="nav navbar-nav">
-         <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-               <a class="waves-effect waves-light btn"><i class="mdi-file-cloud left"></i>Colores</a>	
-               <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color1</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color2</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color3</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color4</a></li>
-               <li><a class="waves-effect waves-light btn-flat"><i class="mdi-file-cloud left"></i>Color5</a></li>
-            </ul>
-         </li>
-      </ul>
-   </div>
-</nav>
 
         <div id="container"></div>
 
@@ -102,7 +60,7 @@
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura2.png') });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura4.png') });
 		        loader = new THREE.JSONLoader();
 		        loader.load('Gabinetes.js', function (geometry) {
 		            mesh = new THREE.Mesh(geometry, cuboMaterial);
@@ -130,3 +88,8 @@
        
 	</body>
 </html>
+<?php
+}else{
+  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+}
+  ?>

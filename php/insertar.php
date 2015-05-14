@@ -25,7 +25,7 @@ if ($conexion) {
 		if ($cuatro == $cinco) {
 
 			mysql_query("INSERT INTO usuario (usuario, nombre, apellido, contra, correo, telefono, dui, tipo) VALUES ('".$uno."', '".$dos."', '".$tres."', '".$cuatro."', '".$seis."', '".$siete."', '".$ocho."', '".$diez."')");
-                header("Location: ../adindex.php");
+                header("Location: ../muebles.php");
 		}else{
 			echo "Error, los valores no han sido insertados";
 			header("Location: ../login.php");
