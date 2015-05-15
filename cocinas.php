@@ -79,8 +79,7 @@ include('navbar.html');
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooool</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
