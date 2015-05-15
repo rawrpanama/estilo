@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
+if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
 $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
 
