@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
+if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
 $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
 
@@ -23,7 +23,7 @@ $result = $con->query($consulta);
 </head>
 <body>
  <?php
-include('navbar.html');
+include('unavbar.html');
  ?>
  <div class="container">
    <div class="row">
