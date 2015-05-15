@@ -7,7 +7,7 @@ $ruta = '../img/materiales';
 $rutatmp = $_FILES['img']['tmp_name'];
 $nombre_img = $_FILES['img']['name'];
 $ruta_dest = $ruta.'/'.$nombre_img;
-
+copy($rutatmp, $ruta_dest);
 
 $material = $_POST['material'];
 $tipo = $_POST['tipo'];
