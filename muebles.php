@@ -16,11 +16,11 @@ if (isset($_SESSION['suser'])) {
              <div class="col s6">
                  <div class="card small">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="img/compresion.jpg">
+          <img class="activator responsive-img" src="img/compresion.jpg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Baño<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="">Ver más</a></p>
+          <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Que encontrara en esta sección? <i class="mdi-navigation-close right"></i></span>
@@ -34,11 +34,11 @@ if (isset($_SESSION['suser'])) {
              <div class="col s6">
                  <div class="card small">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="img/mesatrabajo.jpg">
+          <img class="activator responsive-img" src="img/mesatrabajo.jpg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Escritorio<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="">Ver más</a></p>
+          <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Que encontrara en esta sección? <i class="mdi-navigation-close right"></i></span>
@@ -53,11 +53,11 @@ if (isset($_SESSION['suser'])) {
                <div class="col s6">
                  <div class="card small">   
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="img/cocina.jpg">
+          <img class="activator responsive-img" src="img/cocina.jpg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Cocina<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="">Ver más</a></p>
+          <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Que encontrara en esta sección?<i class="mdi-navigation-close right"></i></span>
@@ -70,11 +70,11 @@ if (isset($_SESSION['suser'])) {
                 <div class="col s6">
                  <div class="card small">   
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="img/mesaaa.jpg">
+          <img class="activator responsive-img" src="img/mesaaa.jpg">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Mesa<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="">Ver más</a></p>
+          <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">¿Qué encontrara en esta sección?<i class="mdi-navigation-close right"></i></span>
