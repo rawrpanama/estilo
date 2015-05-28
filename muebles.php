@@ -19,12 +19,12 @@ if (isset($_SESSION['suser'])) {
           <img class="activator responsive-img" src="img/compresion.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Baño<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">Ver más</a></p>
+          <span class="card-title activator grey-text text-darken-4">Bathroom<i class="mdi-navigation-more-vert right"></i></span>
+          <p><a class="activator" href="#">See more</a></p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Que encontrara en esta sección? <i class="mdi-navigation-close right"></i></span>
-          <p> Adapta tu baño a tu gusto con los diferentes estilos que ofrecemos. Descubre los tipos de baños y personalizalos. Los elementos mas fundamentales son: <br> * Bañera <br> * Retrete. <br> * Laba Manos. <br> * espejo (opcional).<br>
+          <span class="card-title grey-text text-darken-4">Which you will find in this section? <i class="mdi-navigation-close right"></i></span>
+          <p> Does your bathroom to your liking with the different styles we offer. Discover the types of baths and customize them. The elements most fundamental are: <br> * Bath <br> * Toilet. <br> * Washing hands. <br> * Mirror (optional).<br>
               <a href="banos.php">Ir</a>    
             </p>
         </div>
@@ -41,7 +41,7 @@ if (isset($_SESSION['suser'])) {
           <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Que encontrara en esta sección? <i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">Which you will find in this section? <i class="mdi-navigation-close right"></i></span>
           <p>Obten tu propio espacio de trabajo, manten tus objetos en orden, coloca tus materiales en su puesto. <br> Tener un mueble que te beneficie, podras trabajar comodamente y saber donde tienes tus materiales de estudio. Personalizalo!<br>
               <a href="escritorios.php">Ir</a>
             
@@ -56,11 +56,11 @@ if (isset($_SESSION['suser'])) {
           <img class="activator responsive-img" src="img/cocina.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Cocina<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">Ver más</a></p>
+          <span class="card-title activator grey-text text-darken-4">Kitchen<i class="mdi-navigation-more-vert right"></i></span>
+          <p><a class="activator" href="#">See more</a></p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Que encontrara en esta sección?<i class="mdi-navigation-close right"></i></span>
+          <span class="card-title grey-text text-darken-4">Which you will find in this section?<i class="mdi-navigation-close right"></i></span>
           <p>Tener tu cocina en orden con todos los utencilios, el mueble de cocina consiste en un modulo, donde puedes guardar todos tus utencilios de cocina en orden, de forma que puedas tener tu cocina más organisada . Personalizalo!<br>
               <a href="cocinas.php">Ir</a>
             </p>
@@ -73,12 +73,12 @@ if (isset($_SESSION['suser'])) {
           <img class="activator responsive-img" src="img/mesaaa.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Mesa<i class="mdi-navigation-more-vert right"></i></span>
+          <span class="card-title activator grey-text text-darken-4">Closet<i class="mdi-navigation-more-vert right"></i></span>
           <p><a class="activator" href="#">Ver más</a></p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">¿Qué encontrara en esta sección?<i class="mdi-navigation-close right"></i></span>
-          <p>Tenemos varios estilos de mesas, tu puedes tomar uno de ellos y personalizarlos!<br>
+          <span class="card-title grey-text text-darken-4">Which you will find in this section?<i class="mdi-navigation-close right"></i></span>
+          <p>We have several styles of closet, you can take one of them and customize them!<br>
               <a href="mesas.php">Ir</a>
             
             </p>
