@@ -22,7 +22,7 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                           <label for="tipo">Tipo</label>
                         </div>
                         <div class="input-field col s12 m6">
-                          <input type="text" id="price" name="price" required="required" onkeypress="return num(event)">
+                          <input type="text" id="price" name="price" required="required">
                           <label for="price">Precio</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -42,7 +42,7 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                 </form>
         </div>
       </div>
-      <script type="text/javascript" src="js/validaciones.js"></script>
+
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>

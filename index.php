@@ -74,17 +74,17 @@
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
-                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" required="required" maxlength="20">
+                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" required="required">
                           <label for="user">Usuario</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
-                          <input type="text" id="name" name="name"  class="validate" required="required" onkeypress="return letras(event)" maxlength="20">
+                          <input type="text" id="name" name="name"  class="validate" required="required" onkeypress="return letras(event)">
                           <label for="name">Nombre</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
-                          <input type="text" id="ape" name="ape" required="required" onkeypress="return letras(event)" maxlength="20">
+                          <input type="text" id="ape" name="ape" required="required" onkeypress="return letras(event)">
                           <label for="ape">Apellido</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -104,12 +104,12 @@
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-phone prefix"></i>
-                          <input type="text" id="cel" name="cel" class="validate" required="required" onkeypress="return num(event)" maxlength="8">
+                          <input type="text" id="cel" name="cel" class="validate" required="required" onkeypress="return num(event)">
                           <label for="cel">Teléfono</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-credit-card prefix"></i>
-                          <input type="text" id="dui" name="dui" class="validate" required="required" onkeypress="return num(event)" maxlength="9">
+                          <input type="text" id="dui" name="dui" class="validate" required="required" onkeypress="return num(event)">
                           <label for="dui">DUI</label>
                         </div>
                       </div>

@@ -20,15 +20,13 @@ $i = 1;
 		         <li>
 		             <p class="flow-text black-text center">Texturas</p>
 		            <ul >
-		            	<?php while ($row = mysqli_fetch_array($result)) {
-		            		$i = $i + 1;
-		            		?>
-		                <a id="<?php echo "$i";?>" onclick='cambiar(<?php echo "$i" ?>)'><img class="responsive-img" src="<?php echo $row['img']; ?>" style="widht: 25px; Height: 50px;"></a>
-		                <!--<a href="mueble1txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
-		                <a href="mueble1txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
-		                <a href="mueble1txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
-		                <a href=""><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>-->
-		                 <?php } ?>
+		                <a id="mueble1" href="mueble1.php"><img class="responsive-img" src="../img/materiales/madera.jpg" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble2" href="mueble1txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble3" href="mueble1txt3.php"><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble4" href="mueble1txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble5" href="mueble1txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble6" href="mueble1txt6.php"><img class="responsive-img" src="../img/materiales/textura6.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble7" href="mueble1txt7.php"><img class="responsive-img" src="../img/materiales/textura7.png" style="widht: 25px; Height: 50px;"></a>
 		            </ul>
 		         </li>
 		      </ul>
@@ -43,12 +41,7 @@ $i = 1;
         <script type="text/javascript" src="../js/inicio.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
 		<script>
-		var dir = "../img/materiales/textura3.png";
-		function cambiar(txt){
-			//alert(txt);
-			dir = "../img/materiales/textura"+txt+".png";
-			//alert(dir);
-		}
+		
 
 		    var container, stats;
 		    var camera, controls, scene, renderer;
@@ -94,7 +87,7 @@ $i = 1;
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture(dir) });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/madera.jpg') });
 		        cuboMaterial.needsUpdate=true;
 		        loader = new THREE.JSONLoader();
 		        loader.load('Gabinetes.js', function (geometry) {
@@ -123,6 +116,15 @@ $i = 1;
 		</script>
        
 	</body>
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		      <a class="btn-floating btn-large red">
+		      <i class="large mdi-action-settings"></i>
+		      </a>
+		    <ul>
+		      <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Atrás"><i class="large mdi-hardware-keyboard-backspace"></i></a></li>
+		      <li><a href="../reser.php?m=1" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar"><i class="large mdi-editor-attach-file"></i></a></li>
+		    </ul>
+		  </div>
 </html>
  <?php
 }else{

@@ -23,7 +23,7 @@ $result = $con->query($consulta);
 </head>
 <body>
  <?php
-include('unavbar.html');
+include('navbar.html');
  ?>
  <div class="container">
    <div class="row">
@@ -79,7 +79,8 @@ include('unavbar.html');
               <span class="card-title">Card Title</span>
             </div>
             <div class="card-content">
-              <p>loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooool</p>
+              <p>I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>

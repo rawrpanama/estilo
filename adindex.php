@@ -17,6 +17,7 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
               <a class="waves-effect waves-light btn-large z-depth-5" href="adusuarios.php">Mantenimiento usuarios</a>
               <a class="waves-effect waves-blue btn-large cyan lighten-2 z-depth-5" href="ad-new-user.php">Agregar nuevo usuario</a>
               <a class="waves-effect waves-blue btn-large blue darken-4 z-depth-5" href="ad-new-material.php">Agregar nuevo material</a>
+              <a class="waves-effect waves-blue btn-large green accent-3 z-depth-5" href="ad-ver-reser.php">Ver reservas </a>
             </center>
           </div>
         </div>

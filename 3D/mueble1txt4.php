@@ -2,6 +2,10 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
+$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
+$consulta = 'SELECT * FROM material';
+$result = $con->query($consulta);
+$i = 1;
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -10,12 +14,35 @@ if (isset($_SESSION['suser'])) {
 		<?php include("../3navbar.html");?>
 	</head>
 	<body>
-
+		<nav class="navbar navbar-default">
+		    <div>
+		      <ul class="nav navbar-nav">
+		         <li>
+		             <p class="flow-text black-text center">Texturas</p>
+		            <ul >
+		                <a id="mueble1" href="mueble1.php"><img class="responsive-img" src="../img/materiales/madera.jpg" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble2" href="mueble1txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble3" href="mueble1txt3.php"><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble4" href="mueble1txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble5" href="mueble1txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble6" href="mueble1txt6.php"><img class="responsive-img" src="../img/materiales/textura6.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble7" href="mueble1txt7.php"><img class="responsive-img" src="../img/materiales/textura7.png" style="widht: 25px; Height: 50px;"></a>
+		            </ul>
+		         </li>
+		      </ul>
+		   </div>
+		</nav>
+        
         <div id="container"></div>
 
         <script src="build/three.js"></script>
+        <script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../js/inicio.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
 		<script>
+		
+
 		    var container, stats;
 		    var camera, controls, scene, renderer;
 
@@ -61,6 +88,7 @@ if (isset($_SESSION['suser'])) {
 		        //******************************************************************************************************
 
 		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura4.png') });
+		        cuboMaterial.needsUpdate=true;
 		        loader = new THREE.JSONLoader();
 		        loader.load('Gabinetes.js', function (geometry) {
 		            mesh = new THREE.Mesh(geometry, cuboMaterial);
@@ -68,6 +96,7 @@ if (isset($_SESSION['suser'])) {
 		            mesh.scale.x = 25;
 		            mesh.scale.y = 25;
 		            mesh.id = "sillon";
+		            mesh.needsUpdate=true;
 		            scene.add(mesh);
 		        });
 
@@ -85,11 +114,19 @@ if (isset($_SESSION['suser'])) {
 		    }
 
 		</script>
-       
+       <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+		      <a class="btn-floating btn-large red">
+		      <i class="large mdi-action-settings"></i>
+		      </a>
+		    <ul>
+		      <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Atrás"><i class="large mdi-hardware-keyboard-backspace"></i></a></li>
+		      <li><a href="../reser.php" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar"><i class="large mdi-editor-attach-file"></i></a></li>
+		    </ul>
+		  </div>
 	</body>
 </html>
-<?php
+ <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Usuario no autenticado"); location.href = "../index.php"; </script>';
 }
   ?>

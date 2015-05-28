@@ -25,7 +25,7 @@ if (isset($_SESSION['suser'])) {
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Que encontrara en esta sección? <i class="mdi-navigation-close right"></i></span>
           <p> Adapta tu baño a tu gusto con los diferentes estilos que ofrecemos. Descubre los tipos de baños y personalizalos. Los elementos mas fundamentales son: <br> * Bañera <br> * Retrete. <br> * Laba Manos. <br> * espejo (opcional).<br>
-              <a href="baños.php">Ir</a>    
+              <a href="banos.php">Ir</a>    
             </p>
         </div>
                 </div>

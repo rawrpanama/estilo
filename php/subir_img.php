@@ -19,7 +19,6 @@ $consul = mysql_query($sql);
 
 if ($consul) {
 	echo "Se ha insertado correctamente";
-	header("location: ../ad-new-material.php");
 }else{
 	echo "Ha ocurrido un error";
 }

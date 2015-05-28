@@ -23,7 +23,7 @@ $result = $con->query($consulta);
 </head>
 <body>
  <?php
-include('unavbar.html');
+include('navbar.html');
  ?>
  <div class="container">
    <div class="row">
