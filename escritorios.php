@@ -30,12 +30,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba2.png">
+              <span class="card-title">Desk</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Desktop in the form of L.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -45,12 +44,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba3.png">
+              <span class="card-title">Office Furniture</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Multipurpose Furniture.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -60,12 +58,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba4.png">
+              <span class="card-title">Stylish Office Furniture</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Stylish Office Furniture to organize files and papers</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -75,12 +72,11 @@ include('unavbar.html');
         <div class="col s12 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba8.png">
+              <span class="card-title">Office Furniture</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Furniture for organize files and recopilate paper </p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -90,12 +86,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba9.png">
+              <span class="card-title">Office Furniture</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Office furniture to order the books, documents, paperwork and files.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
