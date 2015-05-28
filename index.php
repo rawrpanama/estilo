@@ -18,48 +18,48 @@
                 <img src="img/logo.png" style="width: 35%; height:40%;" class="responsive-img">
               </div>
               <div class="row">
-                <h2 class="col s12 m12 center">¿Qué es <i>Estilo</i>?</h2>
-                <div class="col s12 m8 offset-m2 flow-text"><p class="header light">Estilo es una página web que le permite al usuario personalizar sus propios muebles a partir de diseños ya establecidos.</p></div>
+                <h2 class="col s12 m12 center">¿What is <i>Estilo</i>?</h2>
+                <div class="col s12 m8 offset-m2 flow-text"><p class="header light">Style is a web page that allows to the user to personalize its own furniture from already established designs.</p></div>
               </div>
           </div>
         </div>
         <div class="section">
           <div class="container">
             <div class="row">
-              <h4 class="center light flow-text">Empieza a personalizar tu propio mueble, lo único que tienes que hacer es iniciar sesión o registrase si no tienes un usuario.</h4>
+              <h4 class="center light flow-text">Start customizing your own furniture, the only thing you have to do is login or register if you don't have a user.</h4>
               <div class="col s6 offset-m3">
                 <!-- Botón modal -->
                 <center>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#regis-ml">Registrarse</a>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#ini-ml">Iniciar sesión</a>
+              <a class="waves-effect waves-light btn modal-trigger blue" href="#regis-ml">Register</a>
+              <a class="waves-effect waves-light btn modal-trigger blue" href="#ini-ml">Login</a>
             </center>
             <!-- Modal que abre -->
             <div id="ini-ml" class="modal">
                 <div class="modal-content">
-                  <h5 class="center">Iniciar sesión</h4>
-                  <h4 class="center light">Ingresa tus datos</h4>
+                  <h5 class="center">Login</h4>
+                  <h4 class="center light">Tipe your data</h4>
                   <div class="row">
                     <form action="php/comprobar.php" method="POST" class="col s12">
                       <div class="row">
                         <div class="input-field col s8 m8 offset-m2">
                           <i class="mdi-action-account-circle prefix"></i>
                           <input type="text" id="user" name="user" required="required">
-                          <label for="user">Usuario</label>
+                          <label for="user">User</label>
                         </div>
                         <div class="input-field col s8 m8 offset-m2">
                           <i class="mdi-action-lock prefix"></i>
                           <input type="password" id="pass" name="pass" class="validate" required="required">
-                          <label for="pass">Contraseña</label>
+                          <label for="pass">Password</label>
                         </div>
                       </div>
                  
                 <div class="modal-footer">
-                  <button class="waves-effect waves-green btn-flat" type="submit">Iniciar Sesión
+                  <button class="waves-effect waves-green btn-flat" type="submit">Lonin
                   <i class="mdi-content-send right"></i>
                 </button>
                   <!--<a href="#" class="waves-effect waves-green btn-flat modal-action green-text">Iniciar Sesión</a>-->
                   </form>
-                  <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close red-text">Cancelar</a>
+                  <a href="#" class="waves-effect waves-red btn-flat modal-action modal-close red-text">Cancel</a>
               </div>
               </div>
                </div>
@@ -67,55 +67,55 @@
 
               <div id="regis-ml" class="modal">
                 <div class="modal-content">
-                  <h5 class="center">Registrarse </h4>
-                  <h4 class="center light">Ingresa tu información</h4>
+                  <h5 class="center">Register </h4>
+                  <h4 class="center light">Tipe your information</h4>
                   <div class="row">
                     <form action="php/insertar.php" method="POST" class="col s12">
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
                           <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" required="required">
-                          <label for="user">Usuario</label>
+                          <label for="user">User</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="name" name="name"  class="validate" required="required" onkeypress="return letras(event)">
-                          <label for="name">Nombre</label>
+                          <label for="name">Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="ape" name="ape" required="required" onkeypress="return letras(event)">
-                          <label for="ape">Apellido</label>
+                          <label for="ape">Last Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
                           <input type="password" id="pass1" name="pass1" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deberías usar letras, números y símbolos" required="required">
-                          <label for="pass1">Contraseña</label>
+                          <label for="pass1">Password</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-email prefix"></i>
                           <input type="email" id="email" name="email" class="validate" required="required">
-                          <label for="email">Correo</label>
+                          <label for="email">e-mail</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
                           <input type="password" id="pass2" name="pass2" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Repite tu contraseña" required="required">
-                          <label for="pass2">Confirmar contraseña</label>
+                          <label for="pass2">Confirm Password</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-phone prefix"></i>
                           <input type="text" id="cel" name="cel" class="validate" required="required" onkeypress="return num(event)">
-                          <label for="cel">Teléfono</label>
+                          <label for="cel">Phone</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-credit-card prefix"></i>
                           <input type="text" id="dui" name="dui" class="validate" required="required" onkeypress="return num(event)">
-                          <label for="dui">DUI</label>
+                          <label for="dui">ID</label>
                         </div>
                       </div>
                     
                 <div class="modal-footer">
-                  <button class="waves-effect waves-green btn-flat" type="submit">Registrarse
+                  <button class="waves-effect waves-green btn-flat" type="submit">Registrer
                   <i class="mdi-content-send right"></i>
                 </button>
                 </form>
