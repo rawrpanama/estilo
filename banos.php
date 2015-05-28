@@ -30,12 +30,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba4.png">
+              <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Simple and practical stand for bathrooms, has 5 spaces in vertical, 2 drawers and 2 empty spaces horizontally.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -45,12 +44,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba6.png">
+              <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Practical and simple stand for bathrooms, has 1 spaces in horizontally.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -60,12 +58,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba8.png">
+              <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Practical and simple stand for bathrooms, has 4 spaces horizontally and 4 drawers in horizontal.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -75,12 +72,11 @@ include('unavbar.html');
         <div class="col s12 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba9.png">
+              <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Practical and simple stand for bathrooms, has 3 shelves in horizontally.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -90,12 +86,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba10.png">
+              <span class="card-title">Furniture</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Practical and simple stand for bathrooms, also has 2 drawers and shelves in a horizontally.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
