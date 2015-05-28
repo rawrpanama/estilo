@@ -25,7 +25,7 @@ $result = $con->query($consulta);
  <?php
 include('unavbar.html');
  ?>
-    <h3 class="light center">Mantenimiento de usuarios</h3>
+    <h3 class="light center">Modificar mis datos</h3>
     <?php while ($row = mysqli_fetch_array($result)) {?>
    <div class="container">
         <div class="row">
@@ -63,9 +63,9 @@ include('unavbar.html');
                           <label for="dui">DUI</label>
                         </div>
                       </div>
-                  <button class="waves-effect waves-green btn-flat" type="submit">Agregar<i class="mdi-content-send right"></i>
+                  <button class="waves-effect waves-green btn-flat" type="submit">Modificar<i class="mdi-content-send right"></i>
                 </button>
-                <a href="adindex.php" class="waves-effect waves-red red-text">Atrás</a>
+                <a href="my-profile.php" class="waves-effect waves-red red-text">Atrás</a>
                 </form>
         </div>
       </div>
