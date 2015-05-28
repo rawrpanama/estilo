@@ -30,12 +30,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba.png">
+              <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Large closets with 8 drawers.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -45,12 +44,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba3.png">
+              <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Small cabinet with 8 drawers.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -60,12 +58,11 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba5.pnh">
+              <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Ample closet space.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
@@ -75,12 +72,11 @@ include('unavbar.html');
         <div class="col s12 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/prueba8.png">
+              <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Small furniture with 3 ledges and 3 drawers.</p>
             </div>
             <div class="card-action">
               <a class="green-text" href="#">Ver 3D</a>
