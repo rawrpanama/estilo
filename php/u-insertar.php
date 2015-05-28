@@ -1,7 +1,7 @@
 <?php
 $conexion = mysql_connect('localhost', 'root', '');
 
-if ($conexion == falses){
+if ($conexion == true){
 	mysql_select_db('estilo');
     mysql_query("update usuario set nombre='".$_GET['name']."' where iduser=".$_GET['iduser']);
     mysql_query("update usuario set apellido='".$_GET['ape']."' where iduser=".$_GET['iduser']);
