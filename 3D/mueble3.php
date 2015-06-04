@@ -5,7 +5,7 @@ if (isset($_SESSION['suser'])) {
 $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
 $consulta = 'SELECT * FROM material';
 $result = $con->query($consulta);
-$i = 1;
+$i = 15;
 ?>
 <!DOCTYPE html>
 <html lang="es">

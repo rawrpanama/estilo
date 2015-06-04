@@ -1,9 +1,10 @@
 <?php
 session_start();
 if (isset($_SESSION['suser'])) {
+    $id = $_SESSION['suser'];
 $con = mysql_connect('127.0.0.1', 'root','') or die('Error en el servidor');
 mysql_select_db('Estilo');
-$mbid=1;
+$mbid=53;
 $q = mysql_query("SELECT vis FROM mueble WHERE idmueble='".$mbid."'");
 $a = mysql_fetch_array($q);
 $count = $a['vis'];
