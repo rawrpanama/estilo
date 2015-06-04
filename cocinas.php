@@ -2,11 +2,6 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-
-$consulta = 'SELECT * FROM usuario';
-$result = $con->query($consulta);
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -37,7 +32,7 @@ include('unavbar.html');
               <p>Kitchen Cabinet has 8 drawers and 1 in a horizontal way.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble6txt5.php">3D</a>
             </div>
           </div>
         </div>
@@ -51,7 +46,7 @@ include('unavbar.html');
               <p>Kitchen island, it is possible to use to eat in her, or to serve the meal.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble10.php">3D</a>
             </div>
           </div>
         </div>
@@ -65,7 +60,7 @@ include('unavbar.html');
               <p>This cabinet has two drawers, in which you can place the covered, 2 shelves in horizontal form, and a drawer vertical formS.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble13.php">3D</a>
             </div>
           </div>
         </div>
@@ -79,22 +74,21 @@ include('unavbar.html');
               <p>This large cabinet contains 8 drawers, which 3 are horizontally and the other 5 in vertical.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble4txt2.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/cocina.jpg">
-              <span class="card-title">Card Title</span>
+              <img src="img/muebles/mueble1txt2.png">
+              <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
+              <p>Elegant kitchen module with doors in vertical and some pretty pullings.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble1.php">3D</a>
             </div>
           </div>
         </div>

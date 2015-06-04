@@ -38,7 +38,7 @@ if($row[0] == 1){
 		<?php
 	}
 }else{
-	echo '<script> alert("Contraseña o usuario erroneo");
+	echo '<script> alert("User or password is incorrect");
 			location.href="../index.php";</script>';
 }		
 ?>

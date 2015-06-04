@@ -19,15 +19,15 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                         </div>
                         <div class="input-field col s12 m6">
                           <input type="text" id="tipo" name="tipo"  class="validate" required="required">
-                          <label for="tipo">Tipo</label>
+                          <label for="tipo">Type</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <input type="text" id="price" name="price" required="required">
-                          <label for="price">Precio</label>
+                          <label for="price">Price</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <input type="text" id="codi" name="codi" class="validate" required="required">
-                          <label for="codi">Código</label>
+                          <label for="codi">Code</label>
                         </div>
                         <!--<div class="input-field col s12 m6">
                           <i class="mdi-communication-email prefix"></i>-->
@@ -36,9 +36,9 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                         </div>
                         
                       </div>
-                  <button class="waves-effect waves-green btn-flat" type="submit">Agregar<i class="mdi-content-send right"></i>
+                  <button class="waves-effect waves-green btn-flat" type="submit">Addr<i class="mdi-content-send right"></i>
                 </button>
-                <a href="adindex.php" class="waves-effect waves-red red-text">Atrás</a>
+                <a href="adindex.php" class="waves-effect waves-red red-text">Go Back</a>
                 </form>
         </div>
       </div>
@@ -50,6 +50,6 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   </html>
   <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }
   ?>

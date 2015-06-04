@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
   $mueble = $_GET['m'];
-  $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
+  $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
 $consulta = "SELECT * FROM mueble where idmueble =" .$mueble;
 $result = $con->query($consulta);
 ?>
@@ -28,8 +28,8 @@ while ($row = mysqli_fetch_array($result)) {?>
   <div class="container">
     <div class="row">
       <img src="<?php echo $row['img'];?>">
-      <p class="flow-text">Este es el mueble que estas apunto de reservar para su fabricación, ¿Seguro que deseas ordernar este mueble?</p>
-      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Aceptar</a>
+      <p class="flow-text">This is the piece of furniture that are about to book for their manufacture, are you sure you want to sort this furniture?</p>
+      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Ok</a>
     </div>
   </div>
 </center>
@@ -42,6 +42,6 @@ while ($row = mysqli_fetch_array($result)) {?>
 </html>
  <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }
   ?>

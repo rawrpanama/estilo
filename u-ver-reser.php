@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
+$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
 
 $consulta = "SELECT * FROM reserva where iduser='".$id."'";
 $result = $con->query($consulta);
@@ -23,19 +23,19 @@ $result = $con->query($consulta);
  <?php
 include('navbar.html');
  ?>
-    <h3 class="light center">Reserva de muebles</h3>
+    <h3 class="light center">Furniture Reservation</h3>
     <div class="container">
       <div class="row">
     <table class="responsive-table col s12">
       <thead>
         <tr>
-          <th>Usuario</th>
-          <th>Mueble</th>
-          <th>Fecha Ordenado</th>
-          <th>Fecha de Entrega</th>
-          <th>Imagen</td>
+          <th>User</th>
+          <th>Furniture</th>
+          <th>Date ordered</th>
+          <th>Delivery date</th>
+          <th>Image</td>
           <th>Total</th>
-          <th>Estado</th>
+          <th>Status</th>
         </tr>
      </thead>
        <?php while($row = mysqli_fetch_array($result)) {
@@ -67,6 +67,6 @@ include('navbar.html');
 </html>
  <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user "); location.href = "index.php"; </script>';
 }
   ?>

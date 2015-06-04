@@ -37,7 +37,7 @@ include('unavbar.html');
               <p>Simple and practical stand for bathrooms, has 5 spaces in vertical, 2 drawers and 2 empty spaces horizontally.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble7.php">3D</a>
             </div>
           </div>
         </div>
@@ -51,7 +51,7 @@ include('unavbar.html');
               <p>Practical and simple stand for bathrooms, has 1 spaces in horizontally.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble9.php">3D</a>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ include('unavbar.html');
               <p>Practical and simple stand for bathrooms, has 4 spaces horizontally and 4 drawers in horizontal.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble11.php">3D</a>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@ include('unavbar.html');
               <p>Practical and simple stand for bathrooms, has 3 shelves in horizontally.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble13.php">3D</a>
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@ include('unavbar.html');
               <p>Practical and simple stand for bathrooms, also has 2 drawers and shelves in a horizontally.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="#">Ver 3D</a>
+              <a class="green-text" href="3D/mueble12.php">3D</a>
             </div>
           </div>
         </div>

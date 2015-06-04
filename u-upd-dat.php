@@ -25,7 +25,7 @@ $result = $con->query($consulta);
  <?php
 include('unavbar.html');
  ?>
-    <h3 class="light center">Modificar mis datos</h3>
+    <h3 class="light center">Modify my data</h3>
     <?php while ($row = mysqli_fetch_array($result)) {?>
    <div class="container">
         <div class="row">
@@ -35,27 +35,27 @@ include('unavbar.html');
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
                           <input type="text" id="user" name="user" value="<?php echo $row['usuario'];?>" class="validate tooltipped" disabled data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" required="required">
-                          <label for="user">Usuario</label>
+                          <label for="user">User</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="name" name="name" value="<?php echo $row['nombre'];?>" class="validate" required="required" onkeypress="return letras(event)">
-                          <label for="name">Nombre</label>
+                          <label for="name">Name</label>
                         </div>
                         <div class="input-field col s12 m6"> 
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="ape" name="ape" value="<?php echo $row['apellido'];?>"required="required" onkeypress="return letras(event)">
-                          <label for="ape">Apellido</label>
+                          <label for="ape">Last name</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-email prefix"></i>
                           <input type="email" id="email" name="email" value="<?php echo $row['correo'];?>"class="validate" required="required">
-                          <label for="email">Correo Electrónico</label>
+                          <label for="email">e-mail</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-phone prefix"></i>
                           <input type="text" id="cel" name="cel" value="<?php echo $row['telefono'];?>" class="validate" required="required" onkeypress="return num(event)">
-                          <label for="cel">Número de teléfono</label>
+                          <label for="cel">Phone number</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-credit-card prefix"></i>
@@ -63,9 +63,9 @@ include('unavbar.html');
                           <label for="dui">DUI</label>
                         </div>
                       </div>
-                  <button class="waves-effect waves-green btn-flat" type="submit">Modificar<i class="mdi-content-send right"></i>
+                  <button class="waves-effect waves-green btn-flat" type="submit">Modify<i class="mdi-content-send right"></i>
                 </button>
-                <a href="my-profile.php" class="waves-effect waves-red red-text">Atrás</a>
+                <a href="my-profile.php" class="waves-effect waves-red red-text">Back</a>
                 </form>
         </div>
       </div>
@@ -77,6 +77,6 @@ include('unavbar.html');
 </html>
  <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }
   ?>

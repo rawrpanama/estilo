@@ -11,7 +11,7 @@ if ($conexion == true){
     echo "<script>alert('Datos insertados correctamente');
 				location.href='../u-upd-dat.php';</script>";
 }else{
-	 echo "<script>alert('Ha ocurrido un error');
+	 echo "<script>alert('An error has ocurred');
 				location.href='../u-upd-dat.php';</script>";
 }
 ?>

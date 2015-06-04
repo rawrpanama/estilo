@@ -15,24 +15,24 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <input type="text" id="user" name="user"  class="validate" required="required">
-                          <label for="user">Nombre</label>
+                          <label for="user">Name</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <input type="text" id="name" name="name"  class="validate" required="required" onkeypress="return num(event)">
-                          <label for="name">Alto</label>
+                          <label for="name">Height</label>
                         </div>
                         <div class="input-field col s12 m6"> 
                           <input type="text" id="ape" name="ape" required="required" onkeypress="return num(event)">
-                          <label for="ape">Ancho</label>
+                          <label for="ape">Width</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <input type="password" id="pass1" name="pass1" class="validate" required="required">
-                          <label for="pass1">Precio</label>
+                          <label for="pass1">Price</label>
                         </div>
                       </div>
-                  <button class="waves-effect waves-green btn-flat" type="submit">Agregar<i class="mdi-content-send right"></i>
+                  <button class="waves-effect waves-green btn-flat" type="submit">Add<i class="mdi-content-send right"></i>
                 </button>
-                <a href="adindex.php" class="waves-effect waves-red red-text">Atrás</a>
+                <a href="adindex.php" class="waves-effect waves-red red-text">Go Back</a>
               </form>
         </div>
       </div>
@@ -43,6 +43,6 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   </html>
   <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }
   ?>

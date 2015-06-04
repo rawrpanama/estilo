@@ -17,7 +17,7 @@ if ($conexion) {
 	$sql = "SELECT * FROM usuario where usuario = '$uno'";
 	$usu = mysql_query($sql);
 	if(mysql_num_rows($usu)>0){
-		echo "<script>alert('Usuario ya registrado, intente con otro');
+		echo "<script>alert('This user already exist, try with another one');
 				location.href='../index.php';</script>";
 
 	}else{
@@ -26,8 +26,13 @@ if ($conexion) {
 
 			mysql_query("INSERT INTO usuario (usuario, nombre, apellido, contra, correo, telefono, dui, tipo) VALUES ('".$uno."', '".$dos."', '".$tres."', '".$cuatro."', '".$seis."', '".$siete."', '".$ocho."', '".$diez."')");
                 header("Location: ../muebles.php");
+                $lol = mysql_query("SELECT * FROM usuario WHERE usuario ='".$uno."' and contra ='".$cuatro."'");
+                $var = mysql_fetch_array($lol);
+                session_start();
+                $_SESSION['suser'] = $var['iduser'];
+                $_SESSION['type'] = "user";
 		}else{
-			echo "Error, los valores no han sido insertados";
+			echo "An error has ocurred";
 			header("Location: ../login.php");
 		}
 

@@ -18,7 +18,7 @@
                 <img src="img/logo.png" style="width: 35%; height:40%;" class="responsive-img">
               </div>
               <div class="row">
-                <h2 class="col s12 m12 center">¿What is <i>Estilo</i>?</h2>
+                <h2 class="col s12 m12 center">What is <i>Estilo</i>?</h2>
                 <div class="col s12 m8 offset-m2 flow-text"><p class="header light">Style is a web page that allows to the user to personalize its own furniture from already established designs.</p></div>
               </div>
           </div>
@@ -26,18 +26,18 @@
         <div class="section">
           <div class="container">
             <div class="row">
-              <h4 class="center light flow-text">Start customizing your own furniture, the only thing you have to do is login or register if you don't have a user.</h4>
+              <h4 class="center light flow-text">Start customizing your own furniture, the only thing you have to do is sign in or sign up if you don't have an user.</h4>
               <div class="col s6 offset-m3">
                 <!-- Botón modal -->
                 <center>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#regis-ml">Register</a>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#ini-ml">Login</a>
+              <a class="waves-effect waves-light btn modal-trigger blue" href="#regis-ml">Sign up</a>
+              <a class="waves-effect waves-light btn modal-trigger blue" href="#ini-ml">Sign in</a>
             </center>
             <!-- Modal que abre -->
             <div id="ini-ml" class="modal">
                 <div class="modal-content">
-                  <h5 class="center">Login</h4>
-                  <h4 class="center light">Tipe your data</h4>
+                  <h5 class="center">Sign in</h4>
+                  <h4 class="center light">Type your data</h4>
                   <div class="row">
                     <form action="php/comprobar.php" method="POST" class="col s12">
                       <div class="row">
@@ -54,7 +54,7 @@
                       </div>
                  
                 <div class="modal-footer">
-                  <button class="waves-effect waves-green btn-flat" type="submit">Lonin
+                  <button class="waves-effect waves-green btn-flat" type="submit">Sign in
                   <i class="mdi-content-send right"></i>
                 </button>
                   <!--<a href="#" class="waves-effect waves-green btn-flat modal-action green-text">Iniciar Sesión</a>-->
@@ -68,7 +68,7 @@
               <div id="regis-ml" class="modal">
                 <div class="modal-content">
                   <h5 class="center">Register </h4>
-                  <h4 class="center light">Tipe your information</h4>
+                  <h4 class="center light">Type your information</h4>
                   <div class="row">
                     <form action="php/insertar.php" method="POST" class="col s12">
                       <div class="row">
@@ -85,7 +85,7 @@
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="ape" name="ape" required="required" onkeypress="return letras(event)">
-                          <label for="ape">Last Name</label>
+                          <label for="ape">Last name</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>

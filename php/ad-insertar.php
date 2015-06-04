@@ -17,7 +17,7 @@ if ($conexion){
 	$sql = "SELECT * FROM usuario where usuario = '$uno'";
 	$usu = mysql_query($sql);
 	if(mysql_num_rows($usu)>0){
-		echo "<script>alert('Este usuario ya existe, intenta con otro');
+		echo "<script>alert('This user already exist, try with another one');
 				location.href='../ad-new-user.php';</script>";
 
 	}else{
@@ -27,7 +27,7 @@ if ($conexion){
 			mysql_query("INSERT INTO usuario (usuario, nombre, apellido, contra, correo, telefono, dui, tipo) VALUES ('".$uno."', '".$dos."', '".$tres."', '".$cuatro."', '".$seis."', '".$siete."', '".$ocho."', '".$diez."')");
                 header("Location: ../adindex.php");
 		}else{
-			echo "Un error ha ocurrido";
+			echo "An error has ocurred";
 			header("Location: ../ad-new-user.php");
 		}
 

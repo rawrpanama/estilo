@@ -9,7 +9,7 @@ if ($conexion){
 	$estado = "Terminado";
 	$sql = "UPDATE reserva set estado='$estado' where idmueble = '$idm'";
 	$usu = mysql_query($sql);
-	echo "<script>Alert('Modificado con exito')</script>";
+	echo "<script>Alert('modified successfully')</script>";
 	header("location: ../ad-ver-reser.php");
 }
 

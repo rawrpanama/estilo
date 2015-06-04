@@ -2,10 +2,14 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-$consulta = 'SELECT * FROM material';
-$result = $con->query($consulta);
-$i = 1;
+$con = mysql_connect('127.0.0.1', 'root','') or die('Error en el servidor');
+mysql_select_db('Estilo');
+$mbid=1;
+$q = mysql_query("SELECT vis FROM mueble WHERE idmueble='".$mbid."'");
+$a = mysql_fetch_array($q);
+$count = $a['vis'];
+$count = $count +1;
+mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -87,7 +91,7 @@ $i = 1;
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/madera.jpg') });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura7.png') });
 		        cuboMaterial.needsUpdate=true;
 		        loader = new THREE.JSONLoader();
 		        loader.load('Gabinetes.js', function (geometry) {

@@ -1,10 +1,10 @@
 <?php 
 	mysql_connect('127.0.0.1', 'root', '');
-	mysql_select_db('estilo') or die('Error escogiendo base de datos');
+	mysql_select_db('estilo') or die('Error 404: database not found');
 
 	if($_POST['Caso']=="Eliminar"){
 		mysql_query("DELETE FROM usuario WHERE iduser=".$_POST['Id']);
-		echo 'El usuario ha sido eliminado';
+		echo 'The user has been delete';
 	}
 	if($_POST['Caso']=="Modificar"){
        /* $sql = "SELECT count(*) FROM usuario WHERE usuario ='".$_POST['User'];
@@ -20,7 +20,7 @@
             mysql_query("update usuario set telefono='".$_POST['Telefono']."' where iduser=".$_POST['Id']);
             mysql_query("update usuario set dui='".$_POST['Dui']."' where iduser=".$_POST['Id']);
             mysql_query("update usuario set tipo='".$_POST['Tipo']."' where iduser=".$_POST['Id']);
-            echo 'El usuario ha sido modificado';
+            echo 'The user has been modify';
         /*}else{
             echo "El usuario que se trato de ingresar ya existe, ningún cambio ha sido realizado.";
         }*/

@@ -20,12 +20,12 @@ if (isset($_SESSION['suser'])) {
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Bathroom<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">See more</a></p>
+          <p><a class="activator" href="#">More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section? <i class="mdi-navigation-close right"></i></span>
           <p> Does your bathroom to your liking with the different styles we offer. Discover the types of baths and customize them. The elements most fundamental are: <br> * Bath <br> * Toilet. <br> * Washing hands. <br> * Mirror (optional).<br>
-              <a href="banos.php">Ir</a>    
+              <a href="banos.php">Go</a>    
             </p>
         </div>
                 </div>
@@ -37,13 +37,13 @@ if (isset($_SESSION['suser'])) {
           <img class="activator responsive-img" src="img/mesatrabajo.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">Escritorio<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">Ver más</a></p>
+          <span class="card-title activator grey-text text-darken-4">Office<i class="mdi-navigation-more-vert right"></i></span>
+          <p><a class="activator" href="#">More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section? <i class="mdi-navigation-close right"></i></span>
-          <p>Obten tu propio espacio de trabajo, manten tus objetos en orden, coloca tus materiales en su puesto. <br> Tener un mueble que te beneficie, podras trabajar comodamente y saber donde tienes tus materiales de estudio. Personalizalo!<br>
-              <a href="escritorios.php">Ir</a>
+          <p>You will find a lot of desktop that you can buy to use it in your office. <br> Also, you will find accesories that can be part of your office<br>
+              <a href="escritorios.php">Go</a>
             
             </p>
         </div>
@@ -57,12 +57,12 @@ if (isset($_SESSION['suser'])) {
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Kitchen<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">See more</a></p>
+          <p><a class="activator" href="#">More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section?<i class="mdi-navigation-close right"></i></span>
-          <p>Tener tu cocina en orden con todos los utencilios, el mueble de cocina consiste en un modulo, donde puedes guardar todos tus utencilios de cocina en orden, de forma que puedas tener tu cocina más organisada . Personalizalo!<br>
-              <a href="cocinas.php">Ir</a>
+          <p>In this section you will be able to find kitchens, furnitures for kitchen or piece for a better order in your kitchen<br>
+              <a href="cocinas.php">Go</a>
             </p>
         </div>
                 </div>
@@ -74,12 +74,12 @@ if (isset($_SESSION['suser'])) {
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4">Closet<i class="mdi-navigation-more-vert right"></i></span>
-          <p><a class="activator" href="#">Ver más</a></p>
+          <p><a class="activator" href="#">More</a></p>
         </div>
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section?<i class="mdi-navigation-close right"></i></span>
           <p>We have several styles of closet, you can take one of them and customize them!<br>
-              <a href="mesas.php">Ir</a>
+              <a href="mesas.php">Go</a>
             
             </p>
         </div>

@@ -1,5 +1,5 @@
 <?php
-mysql_connect("localhost", "root", "") or die("no se puede conectar a la base de datos");
+mysql_connect("localhost", "root", "") or die("Error 404 the Database not found");
   mysql_select_db("estilo");
   $sql="select usuario from usuario where iduser = $id";
   $query=mysql_query($sql);
@@ -17,31 +17,31 @@ mysql_connect("localhost", "root", "") or die("no se puede conectar a la base de
               <a href="muebles.php" class="brand-logo">Estilo</a>
               <!--Narbar normal-->
               <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-button" href="muebles.php" data-activates="dropdown1">Muebles<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-                <li><a href="muebles.php">Inicio</a></li>
-                <li><a href="#">Personalizar</a></li>
+                <li><a class="dropdown-button" href="muebles.php" data-activates="dropdown1">Furniture<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                <li><a href="muebles.php">Home</a></li>
+                <li><a href="perso.php">Personalize</a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown2"><?php  while($datos=mysql_fetch_array($query)){echo $datos['usuario'];}?><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
               </ul>
               <!--Narbar móvil-->
               <ul id="nav-mobile" class="side-nav right">
-                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Muebles<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
-                <li><a href="muebles.php">Inicio</a></li>
-                <li><a href="#">Personalizar</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Furniture<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                <li><a href="muebles.php">Home</a></li>
+                <li><a href="perso.php">Personalize</a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown2"><?php  while($datos=mysql_fetch_array($query)){echo $datos['usuario'];}?><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
               </ul>
               <ul id="dropdown1" class="dropdown-content">
-                <li><a href="cocinas.php">Cocina</a></li>
+                <li><a href="cocinas.php">Kitchen</a></li>
                 <li class="divider"></li>
-                <li><a href="escritorios.php">Escritorio</a></li>
+                <li><a href="oficinas.php">Office</a></li>
                 <li class="divider"></li>
-                <li><a href="mesas.php">Mesas</a></li>
+                <li><a href="closets.php">Closets</a></li>
                 <li class="divider"></li>
-                <li><a href="baños.php">Baños</a></li>
+                <li><a href="banos.php">Bathroom</a></li>
               </ul>
               <ul id="dropdown2" class="dropdown-content">
-                <li><a href="php/end.php">Cerrar sesión</a></li>
+                <li><a href="php/end.php">Log out</a></li>
                 <li class="divider"></li>
-                <li><a href="my-profile.php">Mi perfil</a></li>
+                <li><a href="my-profile.php">My Profile</a></li>
               </ul>
               <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
             </div>

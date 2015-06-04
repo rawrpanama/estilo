@@ -18,9 +18,9 @@ $sql = "INSERT INTO material (material, tipo, precio, codigo, img) VALUES('".$ma
 $consul = mysql_query($sql);
 
 if ($consul) {
-	echo "Se ha insertado correctamente";
+	echo "The image was upload correctly";
 }else{
-	echo "Ha ocurrido un error";
+	echo "An error has ocurred";
 }
 
 ?>

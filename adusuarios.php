@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
+$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
 
 $consulta = 'SELECT * FROM usuario';
 $result = $con->query($consulta);
@@ -30,16 +30,16 @@ include('navbar.html');
       <thead>
         <tr>
           <th>Id</th>
-          <th>Usuario</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Contraseña</th>
-          <th>Correo</td>
-          <th>Teléfono</th>
+          <th>User</th>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Password</th>
+          <th>Mail</td>
+          <th>Phone</th>
           <th>DUI</th>
-          <th>Tipo</th>
-          <th>Borrar</th>
-          <th>Modificar</th>
+          <th>Type</th>
+          <th>Delete</th>
+          <th>Modify</th>
         </tr>
      </thead>
        <?php while($row = mysqli_fetch_array($result)) {?>
@@ -53,8 +53,8 @@ include('navbar.html');
         <td><input type="text" id="tel" value="<?php echo $row['telefono'];?>" onkeypress="return num(event)"></td>
         <td><input type="text" id="dui" value="<?php echo $row['dui'];?>" onkeypress="return num(event)"></td>
         <td><input type="text" id="tipo" value="<?php echo $row['tipo'];?>"></td>
-        <td><button class="eliminar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Borrar</button></td>
-        <td><button class="modificar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Modificar</button></td>
+        <td><button class="eliminar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Delete</button></td>
+        <td><button class="modificar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Modify</button></td>
         <?php } ?>
         
       </tr>
@@ -66,6 +66,6 @@ include('navbar.html');
 </html>
  <?php
 }else{
-  echo '<script> alert("Usuario no autenticado"); location.href = "index.php"; </script>';
+  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }
   ?>
