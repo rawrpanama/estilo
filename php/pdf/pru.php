@@ -17,9 +17,8 @@ $server = "localhost";
     $password = "";
     $base = "estilo";
     $link = mysql_connect($server, $user, $password) or die("Error Conectando la Base de Datos");
-    mysql_select_db($base,$link) or die("Error en la seleccion de la base de datos");
-$sql=("SELECT idreserva,total,fecha_ordenado,fecha_entrega FROM reserva WHERE iduser='".$id."'");  
-echo $id;
+    mysql_select_db($base,$link) or die("Error en la seleccion de la base de datos");   
+$sql=("SELECT idreserva,total,fecha_ordenado,fecha_entrega,iduser FROM reserva ");  
     
 $pdf->Image("img/ticket.png");
 $pdf->SetFont("Arial", "b", 12);
@@ -37,6 +36,8 @@ $pdf->MultiCell(35, 5, utf8_decode("Order date"), 0, 1, 'L',0);
 $pdf->SetXY($x + 125, $y);
 $pdf->MultiCell(35, 5, utf8_decode("Delivery date"), 0, 1, 'L',0);
 $pdf->SetXY($x + 165, $y);
+$pdf->MultiCell(35, 5, utf8_decode("User"), 0, 1, 'L',0);
+$pdf->SetXY($x + 195, $y);
 $pdf->Ln();
 $rec=mysql_query($sql);
 while($row = mysql_fetch_array($rec)){
@@ -44,6 +45,7 @@ while($row = mysql_fetch_array($rec)){
     $total=$row['1'];
     $fecha_ordenado=$row['2'];
     $fecha_entrega=$row['3'];
+    $iduser=$row['4'];
     
     $x=$pdf->GetX();
     $y=$pdf->GetY();
@@ -58,6 +60,8 @@ while($row = mysql_fetch_array($rec)){
     $pdf->SetXY($x + 125, $y);
     $pdf->MultiCell(35, 5, utf8_decode("$fecha_entrega"), 0, 1, 'L',0);
     $pdf->SetXY($x + 165, $y);
+    $pdf->MultiCell(35, 5, utf8_decode("$iduser"), 0, 1, 'L',0);
+    $pdf->SetXY($x + 195, $y);
     $pdf->Ln();
 }
    
