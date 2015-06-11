@@ -18,9 +18,7 @@ $result = $con->query($consulta);
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="00acc1">
   <title>Estilo</title>
-  <script type="text/javascript" src="js/modificar.js"></script>
-  <script type="text/javascript" src="js/validaciones.js"></script>
-</head>
+ </head>
 <body>
  <?php
 include('navbar.html');
@@ -59,6 +57,8 @@ include('navbar.html');
         
       </tr>
     </table>
+      <script type="text/javascript" src="js/validaciones.js"></script>
+      <script type="text/javascript" src="js/modificar.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
