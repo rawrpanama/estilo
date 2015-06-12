@@ -106,7 +106,8 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 
 
 		        //******************************************************************************************************
-		        renderer = new THREE.WebGLRenderer();
+		        renderer = new THREE.WebGLRenderer({alpha: true});
+		        renderer.setClearColor(0x000000, 0);
 		        renderer.setSize(window.innerWidth, window.innerHeight);
 		        container.appendChild(renderer.domElement);
 		    }
@@ -126,7 +127,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		      </a>
 		    <ul>
 		      <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Atrás"><i class="large mdi-hardware-keyboard-backspace"></i></a></li>
-		      <li><a href="../reser.php?m=1" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar"><i class="large mdi-editor-attach-file"></i></a></li>
+		      <li><a href="../reser.php?m=56" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar"><i class="large mdi-editor-attach-file"></i></a></li>
 		    </ul>
 		  </div>
 </html>

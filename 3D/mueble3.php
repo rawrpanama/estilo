@@ -102,7 +102,8 @@ $i = 15;
 
 
 		        //******************************************************************************************************
-		        renderer = new THREE.WebGLRenderer();
+		        renderer = new THREE.WebGLRenderer({alpha: true});
+		        renderer.setClearColor(0x000000, 0);
 		        renderer.setSize(window.innerWidth, window.innerHeight);
 		        container.appendChild(renderer.domElement);
 		    }
