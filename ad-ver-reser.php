@@ -35,7 +35,8 @@ include('navbar.html');
           <th>Image</td>
           <th>Total</th>
           <th>Status</th>
-          <th colspan="2">Change status</th>
+          <th>Budget</th>
+          <th>Change status</th>
         </tr>
      </thead>
        <?php while($row = mysqli_fetch_array($result)) {
@@ -55,6 +56,7 @@ include('navbar.html');
         <td><img src="<?php echo $row['img'];?>" style="width: 85px; height:65px;"></td>
         <td><p><?php echo $row['total'];?></p></td>
         <td><p><?php echo $row['estado'];?></p></td>
+        <td><a href="ad-ver-pre.php?m=<?php echo $row['idmueble'];?>" class="waves-effect waves-teal btn-flat blue-text">Budget</a></td>
         <td><a href="php/upt.php?id=<?php echo $row['idmueble'];?>" class="waves-effect waves-teal btn-flat green-text">In producction  </a></td>
         <td><a href="php/upt1.php?id=<?php echo $row['idmueble'];?>" class="waves-effect waves-teal btn-flat blue-text">Done</a></td>
         <?php } ?>

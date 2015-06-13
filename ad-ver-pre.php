@@ -22,24 +22,45 @@ $result = $con->query($consulta);
 </head>
 <body>
  <?php
-include('unavbar.html');
+include('navbar.html');
 while ($row = mysqli_fetch_array($result)) {
-  $sql = "SELECT * FROM pieza WHERE idmueble=".$mueble;
-  $arr = mysql_fetch_array($sql);
-  echo $arr['idpieza'];
-  echo $arr['idmueble'];
+  $sql = mysql_query("SELECT * FROM pieza WHERE idmueble=".$mueble);
   ?>
 
-<center>
   <div class="container">
     <div class="row">
+    <center>
+    <div class="col s12 m12">
       <img src="<?php echo $row['img'];?>">
-      <p class="flow-text">This is the piece of furniture that are about to book for their manufacture, are you sure you want to sort this furniture?</p>
-      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Ok</a>
+      <p class="text">This is the piece of furniture that will be build. Those are the pieces that the furniture contains: </p>
+      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Accept</a>
+      </div>
+      </center>
+      <div>
+        <table>
+        <thead>
+          <tr>
+              <th data-field="id">Name</th>
+              <th data-field="quatity">Item Quantity</th>
+              <th data-field="price">Item Price</th>
+              <th data-field="total">Item Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <?php  while($arr = mysql_fetch_array($sql)){?>
+          <tr>
+            <td><?php echo $arr['nombre']; ?></td>
+            <td><?php echo $arr['cantidad']; ?></td>
+            <td><?php echo "$"; echo $arr['precio']; ?></td>
+            <td><?php echo "$"; echo $arr['precio']*$arr['cantidad']; ?></td>
+          </tr>
+          <?php }  ?>
+        </tbody>
+      </table>
+      </div>
     </div>
   </div>
-</center>
-<?php } ?>
+<?php }  ?>
 
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
