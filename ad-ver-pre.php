@@ -27,6 +27,7 @@ while ($row = mysqli_fetch_array($result)) {
   $sql = "SELECT * FROM pieza WHERE idmueble=".$mueble;
   $arr = mysql_fetch_array($sql);
   echo $arr['idpieza'];
+  echo $arr['idmueble'];
   ?>
 
 <center>
