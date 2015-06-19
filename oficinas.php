@@ -44,7 +44,7 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba3.png">
+              <img src="img/muebles/mueble6txt2.png">
               <span class="card-title">Office Furniture</span>
             </div>
             <div class="card-content">
@@ -58,7 +58,35 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba4.png">
+              <img src="img/muebles/mueble11txt4.png">
+              <span class="card-title">Office Furniture</span>
+            </div>
+            <div class="card-content">
+              <p>Furniture for organize files and recopilate paper </p>
+            </div>
+            <div class="card-action">
+              <a class="green-text" href="3D/mueble11.php">3D</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/muebles/mueble12txt3.png">
+              <span class="card-title">Office Furniture</span>
+            </div>
+            <div class="card-content">
+              <p>Office furniture to order the books, documents, paperwork and files.</p>
+            </div>
+            <div class="card-action">
+              <a class="green-text" href="3D/mueble12.php">3D</a>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="img/muebles/mueble7txt2.png">
               <span class="card-title">Stylish Office Furniture</span>
             </div>
             <div class="card-content">
@@ -66,34 +94,6 @@ include('unavbar.html');
             </div>
             <div class="card-action">
               <a class="green-text" href="3D/mueble7.php">3D</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4 offset-m2">
-          <div class="card">
-            <div class="card-image">
-              <img src="img/muebles/prueba8.png">
-              <span class="card-title">Office Furniture</span>
-            </div>
-            <div class="card-content">
-              <p>Furniture for organize files and recopilate paper </p>
-            </div>
-            <div class="card-action">
-              <a class="green-text" href="mueble11.php">3D</a>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="card">
-            <div class="card-image">
-              <img src="img/muebles/prueba9.png">
-              <span class="card-title">Office Furniture</span>
-            </div>
-            <div class="card-content">
-              <p>Office furniture to order the books, documents, paperwork and files.</p>
-            </div>
-            <div class="card-action">
-              <a class="green-text" href="mueble12.php">3D</a>
             </div>
           </div>
         </div>

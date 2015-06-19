@@ -23,18 +23,23 @@ $result = $con->query($consulta);
 <body>
  <?php
 include('unavbar.html');
-while ($row = mysqli_fetch_array($result)) {?>
+while ($row = mysqli_fetch_array($result)) {
+$pg = mysql_query("SELECT precio from mueble where idmueble=".$mueble);
+$pj = mysql_fetch_array($pg);
+$pre = $pj['precio'];
+  ?>
 <center>
   <div class="container">
     <div class="row">
       <img src="<?php echo $row['img'];?>">
       <p class="flow-text">This is the piece of furniture that are about to book for their manufacture, are you sure you want to sort this furniture?</p>
-      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Ok</a>
+      <p><?php echo "Price: $"; echo $pre; ?></p>
+      <p><?php echo "Ordered: "; echo date('Y/m/d');?></p>
+      <a href="reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Ok</a>
     </div>
   </div>
 </center>
 <?php } ?>
-
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>

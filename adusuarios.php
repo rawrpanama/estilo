@@ -23,7 +23,7 @@ $result = $con->query($consulta);
  <?php
 include('navbar.html');
  ?>
-    <h3 class="light center">Mantenimiento de usuarios</h3>
+    <h3 class="light center">Users maintenance</h3>
     <table class="responsive-table col s12">
       <thead>
         <tr>

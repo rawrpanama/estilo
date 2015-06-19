@@ -25,7 +25,7 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba3.png">
+              <img src="img/muebles/mueble6txt5.png">
               <span class="card-title">Kitchen Cabinet</span>
             </div>
             <div class="card-content">
@@ -39,7 +39,7 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba7.png">
+              <img src="img/muebles/mueble10txt7.png">
               <span class="card-title">Kitchen Island</span>
             </div>
             <div class="card-content">
@@ -53,7 +53,7 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba10.png">
+              <img src="img/muebles/mueble13txt4.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
@@ -67,7 +67,7 @@ include('unavbar.html');
         <div class="col s12 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba.png">
+              <img src="img/muebles/mueble4.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">

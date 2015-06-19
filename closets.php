@@ -3,10 +3,6 @@ session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
 $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-
-$consulta = 'SELECT * FROM usuario';
-$result = $con->query($consulta);
-
 ?>
 <!doctype html>
 <html lang="es">
@@ -30,21 +26,21 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba.png">
+              <img src="img/muebles/mueble4txt7.png">
               <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
               <p>Large closets with 8 drawers.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/muebles4.php">3D</a>
+              <a class="green-text" href="3D/mueble4.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba3.png">
+              <img src="img/muebles/mueble6txt4.png">
               <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
@@ -58,7 +54,7 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba5.png">
+              <img src="img/muebles/mueble8txt2.png">
               <span class="card-title">Closets</span>
             </div>
             <div class="card-content">
@@ -69,10 +65,10 @@ include('unavbar.html');
             </div>
           </div>
         </div>
-        <div class="col s12 m4 offset-m2">
+        <div class="col s12 m4 offset-m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba8.png">
+              <img src="img/muebles/mueble11.png">
               <span class="card-title">Closets</span>
             </div>
             <div class="card-content">

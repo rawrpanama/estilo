@@ -7,6 +7,5 @@ function conexion(){
 	$base = "estilo";
 	$link = mysql_connect($server, $user, $password) or die("Error Conectando la Base de Datos");
 	mysql_select_db($base,$link) or die("Error Seleccionando la base de datos");
-	return $link;
 }
 ?>

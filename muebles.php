@@ -43,7 +43,7 @@ if (isset($_SESSION['suser'])) {
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section? <i class="mdi-navigation-close right"></i></span>
           <p>You will find a lot of desktop that you can buy to use it in your office. <br> Also, you will find accesories that can be part of your office<br>
-              <a href="escritorios.php">Go</a>
+              <a href="oficinas.php">Go</a>
             
             </p>
         </div>
@@ -79,7 +79,7 @@ if (isset($_SESSION['suser'])) {
         <div class="card-reveal">
           <span class="card-title grey-text text-darken-4">Which you will find in this section?<i class="mdi-navigation-close right"></i></span>
           <p>We have several styles of closet, you can take one of them and customize them!<br>
-              <a href="mesas.php">Go</a>
+              <a href="closets.php">Go</a>
             
             </p>
         </div>

@@ -1,8 +1,6 @@
 <?php
 require "fpdf.php";
 session_start();
-if (isset($_SESSION['suser'])) {
-  $id = $_SESSION['suser'];;
      
 function repusuarioes(){
 
@@ -18,7 +16,7 @@ $server = "localhost";
     $base = "estilo";
     $link = mysql_connect($server, $user, $password) or die("Error Conectando la Base de Datos");
     mysql_select_db($base,$link) or die("Error en la seleccion de la base de datos");   
-$sql=("SELECT idreserva,total,fecha_ordenado,fecha_entrega,iduser FROM reserva ");  
+$sql=("SELECT idreserva,total,fecha_ordenado,fecha_entrega,iduser FROM reserva");  
     
 $pdf->Image("img/ticket.png");
 $pdf->SetFont("Arial", "b", 12);
@@ -67,5 +65,4 @@ while($row = mysql_fetch_array($rec)){
    
 $pdf->Output();
 }repusuarioes();
-}
 ?>

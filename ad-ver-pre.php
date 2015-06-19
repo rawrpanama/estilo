@@ -33,7 +33,7 @@ while ($row = mysqli_fetch_array($result)) {
     <div class="col s12 m12">
       <img src="<?php echo $row['img'];?>">
       <p class="text">This is the piece of furniture that will be build. Those are the pieces that the furniture contains: </p>
-      <a href="php/reservar.php?id=<?php echo $mueble;?>" class="waves-effect waves-teal btn-flat green-text">Accept</a>
+      <a href="ad-ver-reser.php" class="waves-effect waves-teal btn-flat green-text">Back</a>
       </div>
       </center>
       <div>
@@ -57,6 +57,7 @@ while ($row = mysqli_fetch_array($result)) {
           <?php }  ?>
         </tbody>
       </table>
+      <p class="center">*Handwork is already include</p>
       </div>
     </div>
   </div>

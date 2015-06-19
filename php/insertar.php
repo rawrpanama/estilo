@@ -1,5 +1,6 @@
 <?php
-$conexion = mysql_connect('localhost', 'root', '');
+include("conexion.php");
+$conexion = conexion();
 
 $uno = $_POST['user'];
 $dos = $_POST['name'];
@@ -13,7 +14,6 @@ $diez = "user";
 
 
 if ($conexion) {
-	mysql_select_db('estilo');
 	$sql = "SELECT * FROM usuario where usuario = '$uno'";
 	$usu = mysql_query($sql);
 	if(mysql_num_rows($usu)>0){

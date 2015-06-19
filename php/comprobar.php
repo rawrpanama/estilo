@@ -1,12 +1,9 @@
 <?php 
-//require_once("conexion.php");
 if(!isset($_SESSION)){
 session_start();
 }
-
-//$l = conexion();
-$conexion = mysql_connect('localhost', 'root', '');
-mysql_select_db('estilo');
+include("conexion.php");
+conexion();
 
 $user = $_POST["user"];
 $pass = sha1($_POST["pass"]);
