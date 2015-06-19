@@ -1,7 +1,6 @@
 <?php
 include("conexion.php");
 conexion();
-
 $uno = $_POST['user'];
 $dos = $_POST['name'];
 $tres = $_POST['ape'];
@@ -13,7 +12,7 @@ $ocho = $_POST['dui'];
 $diez = $_POST['tipo'];
 
 
-if ($conexion){
+if ($cuatro == $cinco){
 	$sql = "SELECT * FROM usuario where usuario = '$uno'";
 	$usu = mysql_query($sql);
 	if(mysql_num_rows($usu)>0){
@@ -27,7 +26,7 @@ if ($conexion){
 			mysql_query("INSERT INTO usuario (usuario, nombre, apellido, contra, correo, telefono, dui, tipo) VALUES ('".$uno."', '".$dos."', '".$tres."', '".$cuatro."', '".$seis."', '".$siete."', '".$ocho."', '".$diez."')");
                 header("Location: ../adindex.php");
 		}else{
-			echo "An error has ocurred";
+			echo "User or password incorrect";
 			header("Location: ../ad-new-user.php");
 		}
 
