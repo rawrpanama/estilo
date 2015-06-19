@@ -1,7 +1,6 @@
 <?php
-
-mysql_connect('127.0.0.1', 'root', '');
-mysql_select_db('estilo') or die('Error choosing a database');
+include("conexion.php");
+conexion();
 
 $ruta = '../img/materiales';
 $rutatmp = $_FILES['img']['tmp_name'];

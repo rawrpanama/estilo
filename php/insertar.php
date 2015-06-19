@@ -1,7 +1,6 @@
 <?php
 include("conexion.php");
-$conexion = conexion();
-
+conexion();
 $uno = $_POST['user'];
 $dos = $_POST['name'];
 $tres = $_POST['ape'];
@@ -13,7 +12,7 @@ $ocho = $_POST['dui'];
 $diez = "user";
 
 
-if ($conexion) {
+if ($cuatro == $cinco) {
 	$sql = "SELECT * FROM usuario where usuario = '$uno'";
 	$usu = mysql_query($sql);
 	if(mysql_num_rows($usu)>0){

@@ -1,11 +1,11 @@
 <?php
-$conexion = mysql_connect('localhost', 'root', '');
+include("conexion.php");
+conexion();
 
 $idm = $_GET['id'];
 echo $idm;
 
-if ($conexion){
-	mysql_select_db('estilo');
+if (isset($idm)){
 	$estado = "Terminado";
 	$sql = "UPDATE reserva set estado='$estado' where idmueble = '$idm'";
 	$usu = mysql_query($sql);

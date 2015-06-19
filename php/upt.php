@@ -1,16 +1,18 @@
 <?php
-$conexion = mysql_connect('localhost', 'root', '');
+include("conexion.php");
+conexion();
 
 $idm = $_GET['id'];
 echo $idm;
 
-if ($conexion){
-	mysql_select_db('estilo');
+if (isset($idm)){
 	$estado = "En producción";
 	$sql = "UPDATE reserva set estado='$estado' where idmueble = '$idm'";
 	$usu = mysql_query($sql);
 	echo "<script>Alert('modified successfully')</script>";
 	header("location: ../ad-ver-reser.php");
+}else{
+	echo "An error has ocurred";
 }
 
 ?>

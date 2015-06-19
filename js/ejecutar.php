@@ -1,6 +1,6 @@
 <?php 
-	mysql_connect('127.0.0.1', 'root', '');
-	mysql_select_db('estilo') or die('Error 404: database not found');
+	include("conexion.php");
+conexion();
 
 	if($_POST['Caso']=="Eliminar"){
 		mysql_query("DELETE FROM usuario WHERE iduser=".$_POST['Id']);

@@ -9,12 +9,8 @@ $pdf=new FPDF('p','mm','Letter');
 $pdf-> SetMargins(20,18);
 $pdf-> AliasNbPages();
 $pdf-> AddPage();
-$server = "localhost";
-    $user = "root";
-    $password = "";
-    $base = "estilo";
-    $link = mysql_connect($server, $user, $password) or die("Error Conectando la Base de Datos");
-    mysql_select_db($base,$link) or die("Error en la seleccion de la base de datos");
+include("../conexion.php");
+conexion();
 $sql=("SELECT idpieza,nombre,alto,ancho,precio FROM pieza");  
     
 $pdf->Image("img/ticket.png");
