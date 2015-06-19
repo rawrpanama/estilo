@@ -7,6 +7,48 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       <meta name="theme-color" content="00acc1">
       <script type="text/javascript" src="js/validaciones.js"></script>
+      <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+      <script type="text/javascript" src="js/typed.js"></script>
+      <script>
+       $(function(){
+      $(".mp").typed({
+        strings: ["Max Panamá. ^1000 Web developer. ^1000 Front-end."],
+        typeSpeed: 30
+      });
+      $(".cm").typed({
+        strings: ["Web developer.", "Front-end.", "Carlos Marín"],
+        typeSpeed: 30
+      });
+      $(".am").typed({
+        strings: ["Web developer.", "Front-end.", "Cerdo."],
+        typeSpeed: 30
+      });
+
+  });
+      </script>
+      <style>
+      .typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+      }
+      @keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-webkit-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      @-moz-keyframes blink{
+          0% { opacity:1; }
+          50% { opacity:0; }
+          100% { opacity:1; }
+      }
+      </style>
       <title>Estilo</title>
     </head>
     <body>
@@ -67,7 +109,7 @@
 
               <div id="regis-ml" class="modal">
                 <div class="modal-content">
-                  <h5 class="center">Register </h4>
+                  <h5 class="center">Register </h5>
                   <h4 class="center light">Type your information</h4>
                   <div class="row">
                     <form action="php/insertar.php" method="POST" class="col s12">
@@ -125,19 +167,34 @@
                 </div>
               </div>
               </div>
-        <!--
+              </form></div></h5></div></div></form></div></h5></div></div></div></div>
+        
         <div class="parallax-container">
-          <div class="parallax"><img src="img/mesa.jpg"></div>
-            <div class="container">
-              <h1>Soy un ejemplo</h1>
-              <div class="row">
-            <div class="col s6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt ullam minima dolorum laborum, cupiditate ad distinctio eligendi maiores similique nemo dicta quasi placeat amet sit unde magni aperiam ut accusamus.</div>
+          <div class="parallax"><img src="img/desk.jpg"></div>
+          <p class="flow-text black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque enim soluta eligendi itaque ducimus cumque veritatis quos velit iusto sed obcaecati eveniet perferendis voluptate, nobis dicta sequi necessitatibus quae?</p>
+       <div class="container">
+        <div class="row">
+          <div class="col s4">
+          <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/031790.jpg">
+          <h4><span class="am"></span></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita repudiandae incidunt facilis corporis! Accusamus in itaque doloremque earum quod enim sunt mollitia, illo laboriosam ipsa nobis voluptatem, nisi laudantium aut.</p>
+          </div>
+          <div class="col s4">
+          <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20130215.jpg">
+          <h4><span class="mp">Max. </span></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae incidunt velit blanditiis quis, commodi saepe mollitia quo enim, dolor unde repudiandae quas, inventore ut? Perspiciatis, aut. Incidunt, commodi, non.</p>
+          </div>
+          <div class="col s4">
+          <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20120117.jpg">
+          <h4><span class="cm"></span></h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt amet, quibusdam nesciunt nihil aliquid reiciendis magnam, saepe dolores porro doloribus harum et, rerum temporibus ratione pariatur! Sed, alias nam dolore.</p>
           </div>
         </div>
-      </div>
-        -->
-        <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
+        </div>
+        </div>
+        </div></div></body> 
+      <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
+
     </body>
   </html>
