@@ -2,10 +2,11 @@
 session_start();
 if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
+include("php/conexion.php");
+conexion();
 
 $consulta = 'SELECT * FROM reserva';
-$result = $con->query($consulta);
+$result =mysql_query($consulta);
 
 ?>
 <!doctype html>
@@ -39,7 +40,7 @@ include('navbar.html');
           <th>Change status</th>
         </tr>
      </thead>
-       <?php while($row = mysqli_fetch_array($result)) {
+       <?php while($row = mysql_fetch_array($result)) {
         $sql = mysql_query("SELECT usuario FROM usuario WHERE iduser= '".$row['iduser']."'");
         $dato = mysql_fetch_array($sql);
         $user = $dato['usuario'];

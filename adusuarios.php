@@ -2,10 +2,11 @@
 session_start();
 if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
+include("php/conexion.php");
+conexion();
 
 $consulta = 'SELECT * FROM usuario';
-$result = $con->query($consulta);
+$result = mysql_query($consulta);
 
 ?>
 <!doctype html>
@@ -40,7 +41,7 @@ include('navbar.html');
           <th>Modify</th>
         </tr>
      </thead>
-       <?php while($row = mysqli_fetch_array($result)) {?>
+       <?php while($row = mysql_fetch_array($result)) {?>
       <tr>
         <td><input type="hidden" value="<?php echo $row['iduser'];?>"><?php echo $row['iduser'];?></td>
         <td><input type="text" id="user" value="<?php echo $row['usuario'];?>"></td>

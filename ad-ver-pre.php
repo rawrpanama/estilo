@@ -3,9 +3,10 @@ session_start();
 if (isset($_SESSION['suser'])  && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
   $mueble = $_GET['m'];
-  $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
+  include("php/conexion.php");
+conexion();
 $consulta = "SELECT * FROM mueble where idmueble =" .$mueble;
-$result = $con->query($consulta);
+$result = mysql_query($consulta);
 ?>
 <!doctype html>
 <html lang="es">
@@ -23,10 +24,9 @@ $result = $con->query($consulta);
 <body>
  <?php
 include('navbar.html');
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysql_fetch_array($result)) {
   $sql = mysql_query("SELECT * FROM pieza WHERE idmueble=".$mueble);
   ?>
-
   <div class="container">
     <div class="row">
     <center>
@@ -36,7 +36,7 @@ while ($row = mysqli_fetch_array($result)) {
       <a href="ad-ver-reser.php" class="waves-effect waves-teal btn-flat green-text">Back</a>
       </div>
       </center>
-      <div>
+      <div class="col s12">
         <table>
         <thead>
           <tr>

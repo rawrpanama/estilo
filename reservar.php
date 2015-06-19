@@ -20,7 +20,7 @@ $esta = "En cola";
 
 if (isset($mueble)) {
 	$query = "INSERT INTO reserva (total, fecha_ordenado, fecha_entrega, img, iduser, idmueble, estado) VALUES ('".$precio."', '".$fecha."', '".$fecha_entre."', '".$img."','".$id."', '".$mueble."','".$esta."')";
-	//mysql_query($query);
+	mysql_query($query);
 	?>
 <html lang="es">
 <head>
