@@ -9,7 +9,16 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
       <?php include('navbar.html');?>
     </head>
     <body>
-      <div class="container">
+      <div class="side">
+        <div class="collection">
+         <a href="#!" class="collection-item flow-text"><i class="mdi-communication-email"></i>User maintenance</a>
+         <a href="#!" class="collection-item flow-text"><i class="mdi-communication-email"></i>Add new user</a>
+         <a href="#!" class="collection-item flow-text"><i class="mdi-communication-email"></i>Add new material</a>
+         <a href="#!" class="collection-item flow-text"><i class="mdi-communication-email"></i>Reservations</a>
+         <a href="#!" class="collection-item flow-text"><i class="mdi-communication-email"></i>Reports</a>
+        </div>
+      </div>
+      <!--<div class="container">
         <div class="row">
           <div class="col s4 offset-s4">
             <h3 class="center ">Welcome to the administrator module</h3>
@@ -22,7 +31,7 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
             </center>
           </div>
         </div>
-      </div>
+      </div>-->
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>,
