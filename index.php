@@ -16,11 +16,11 @@
         typeSpeed: 30
       });
       $(".cm").typed({
-        strings: ["Web developer.", "Front-end.", "Carlos Marín"],
+        strings: ["Carlos Marín. ^1000 Web developer. ^1000 3D-developer"],
         typeSpeed: 30
       });
       $(".am").typed({
-        strings: ["Web developer.", "Front-end.", "Cerdo."],
+        strings: ["Andrés Mata. ^1000 Web developer. ^1000 Back-end."],
         typeSpeed: 30
       });
 
@@ -169,28 +169,33 @@
               </div>
               </form></div></h5></div></div></form></div></h5></div></div></div></div>
         
-        <div class="parallax-container">
-          <div class="parallax"><img src="img/desk.jpg"></div>
-          <p class="flow-text black-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem doloremque enim soluta eligendi itaque ducimus cumque veritatis quos velit iusto sed obcaecati eveniet perferendis voluptate, nobis dicta sequi necessitatibus quae?</p>
-       <div class="container">
+        <div class="parallax-container valign-wrapper">
+          <div class="parallax"><img src="img/desk.jpg"></div>       
+            <div class="valign-wrapper">
+              <h5 class="header flow-text">Give life to your spaces</h5>
+            </div>
+        </div>
+        <div class="section">
+          <div class="container">
         <div class="row">
+          <h3 class="center-align flow-text">Meet the team:</h3>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/031790.jpg">
-          <h4><span class="am"></span></h4>
+          <h5><span class="am"></span></h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita repudiandae incidunt facilis corporis! Accusamus in itaque doloremque earum quod enim sunt mollitia, illo laboriosam ipsa nobis voluptatem, nisi laudantium aut.</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20130215.jpg">
-          <h4><span class="mp">Max. </span></h4>
+          <h5><span class="mp">Max. </span></h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae incidunt velit blanditiis quis, commodi saepe mollitia quo enim, dolor unde repudiandae quas, inventore ut? Perspiciatis, aut. Incidunt, commodi, non.</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20120117.jpg">
-          <h4><span class="cm"></span></h4>
+          <h5><span class="cm"></span></h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt amet, quibusdam nesciunt nihil aliquid reiciendis magnam, saepe dolores porro doloribus harum et, rerum temporibus ratione pariatur! Sed, alias nam dolore.</p>
           </div>
         </div>
-        </div>
+      </div>
         </div>
         </div></div></body> 
       <script type="text/javascript" src="js/materialize.min.js"></script>
