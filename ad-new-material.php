@@ -7,12 +7,18 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
     <head>
       <title>Estilo</title>
       <?php include('navbar.html');?>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-      <div class="container">
         <div class="row">
-          <form action="php/subir_img.php" method="POST" class="col s12" enctype="multipart/form-data">
-                      <div class="row">
+          <div class="collection col s12 m2" style="background-color: #90CAF9;">
+           <a href="adusuarios.php" class="collection-item black-text"><i class="material-icons">contacts</i>User maintenance</a>
+           <a href="ad-new-user.php" class="collection-item black-text"><i class="material-icons">perm_identity</i>Add new user</a>
+           <a href="ad-new-material.php" class="collection-item white-text"><i class="material-icons">polymer</i>Add new material</a>
+           <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
+           <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
+          </div>
+          <form action="php/subir_img.php" method="POST" class="col s10" enctype="multipart/form-data">
                         <div class="input-field col s12 m6">
                           <input type="text" id="material" name="material"  class="validate" required="required">
                           <label for="material">Material</label>
@@ -31,16 +37,13 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                         </div>
                         <!--<div class="input-field col s12 m6">
                           <i class="mdi-communication-email prefix"></i>-->
-                           <input type="file" name="img" placeholder="Imagen" required="required"/>      
+                           <input type="file" name="img" placeholder="Imagen" required="required"/><br><br>
                          <!-- <label for="img">Image</label>-->
-                        </div>
-                        
-                      </div>
-                  <button class="waves-effect waves-green btn-flat" type="submit">Addr<i class="mdi-content-send right"></i>
+
+                  <button class="waves-effect waves-green btn-flat" type="submit">Add<i class="mdi-content-send right"></i>
                 </button>
                 <a href="adindex.php" class="waves-effect waves-red red-text">Go Back</a>
                 </form>
-        </div>
       </div>
 
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>

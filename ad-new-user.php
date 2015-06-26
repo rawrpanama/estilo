@@ -7,11 +7,18 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
     <head>
       <title>Estilo</title>
       <?php include('navbar.html');?>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
-      <div class="container">
         <div class="row">
-          <form action="php/ad-insertar.php" method="POST" class="col s12">
+          <div class="collection col s12 m2" style="background-color: #90CAF9;">
+           <a href="adusuarios.php" class="collection-item black-text"><i class="material-icons">contacts</i>User maintenance</a>
+           <a href="ad-new-user.php" class="collection-item white-text"><i class="material-icons">perm_identity</i>Add new user</a>
+           <a href="ad-new-material.php" class="collection-item black-text"><i class="material-icons">polymer</i>Add new material</a>
+           <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
+           <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
+          </div>
+          <form action="php/ad-insertar.php" method="POST" class="col s10">
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
@@ -23,7 +30,7 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                           <input type="text" id="name" name="name"  class="validate" required="required" onkeypress="return letras(event)">
                           <label for="name">Name</label>
                         </div>
-                        <div class="input-field col s12 m6"> 
+                        <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="ape" name="ape" required="required" onkeypress="return letras(event)">
                           <label for="ape">Last name</label>
@@ -65,7 +72,6 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
                 <a href="adindex.php" class="waves-effect waves-red red-text">Atrás</a>
                 </form>
         </div>
-      </div>
 
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>

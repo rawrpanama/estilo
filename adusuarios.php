@@ -19,24 +19,32 @@ $result = mysql_query($consulta);
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="00acc1">
   <title>Estilo</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  </head>
 <body>
  <?php
 include('navbar.html');
  ?>
     <h3 class="light center">Users maintenance</h3>
-    <table class="responsive-table col s12">
+    <div class="">
+      <div class="row">
+        <div class="collection col s12 m2" style="background-color: #90CAF9;">
+         <a href="adusuarios.php" class="collection-item white-text"><i class="material-icons">contacts</i>User maintenance</a>
+         <a href="ad-new-user.php" class="collection-item black-text"><i class="material-icons">perm_identity</i>Add new user</a>
+         <a href="ad-new-material.php" class="collection-item black-text"><i class="material-icons">polymer</i>Add new material</a>
+         <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
+         <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
+        </div>
+      <table class="responsive-table col s12 m10 bordered" style="float: right;">
       <thead>
         <tr>
           <th>Id</th>
           <th>User</th>
           <th>First name</th>
           <th>Last name</th>
-          <th>Password</th>
           <th>Mail</td>
           <th>Phone</th>
           <th>DUI</th>
-          <th>Type</th>
           <th>Delete</th>
           <th>Modify</th>
         </tr>
@@ -47,17 +55,17 @@ include('navbar.html');
         <td><input type="text" id="user" value="<?php echo $row['usuario'];?>"></td>
         <td><input type="text" id="name" value="<?php echo $row['nombre'];?>" onkeypress="return letras(event)"></td>
         <td><input type="text" id="ape" value="<?php echo $row['apellido'];?>" onkeypress="return letras(event)"></td>
-        <td><input type="text" id="pass" value="<?php echo $row['contra'];?>"></td>
         <td><input type="text" id="mail" value="<?php echo $row['correo'];?>"></td>
         <td><input type="text" id="tel" value="<?php echo $row['telefono'];?>" onkeypress="return num(event)"></td>
         <td><input type="text" id="dui" value="<?php echo $row['dui'];?>" onkeypress="return num(event)"></td>
-        <td><input type="text" id="tipo" value="<?php echo $row['tipo'];?>"></td>
         <td><button class="eliminar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Delete</button></td>
         <td><button class="modificar waves-effect waves-light btn" data-id="<?php echo $row['iduser'];?>">Modify</button></td>
         <?php } ?>
-        
+
       </tr>
     </table>
+    </div>
+  </div>
       <script type="text/javascript" src="js/validaciones.js"></script>
       <script type="text/javascript" src="js/modificar.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
