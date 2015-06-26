@@ -94,7 +94,7 @@
                           <label for="pass">Password</label>
                         </div>
                       </div>
-                 
+
                 <div class="modal-footer">
                   <button class="waves-effect waves-green btn-flat" type="submit">Sign in
                   <i class="mdi-content-send right"></i>
@@ -116,7 +116,7 @@
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
-                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" required="required">
+                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" pattern=".{6,}" required title="Debe contener como minímo 6 caractéres" required="required">
                           <label for="user">User</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -131,7 +131,7 @@
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
-                          <input type="password" id="pass1" name="pass1" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deberías usar letras, números y símbolos" required="required">
+                          <input type="password" id="pass1" name="pass1" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deberías usar letras, números y símbolos" required="required" onkeyup="pass(); return false;">
                           <label for="pass1">Password</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -141,7 +141,7 @@
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
-                          <input type="password" id="pass2" name="pass2" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Repite tu contraseña" required="required">
+                          <input type="password" id="pass2" name="pass2" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Repite tu contraseña" required="required" onkeyup="pass(); return false;">
                           <label for="pass2">Confirm Password</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -155,7 +155,8 @@
                           <label for="dui">ID</label>
                         </div>
                       </div>
-                    
+                      <blockquote id="msg"></blockquote>
+
                 <div class="modal-footer">
                   <button class="waves-effect waves-green btn-flat" type="submit">Registrer
                   <i class="mdi-content-send right"></i>
@@ -168,9 +169,9 @@
               </div>
               </div>
               </form></div></h5></div></div></form></div></h5></div></div></div></div>
-        
+
         <div class="parallax-container valign-wrapper">
-          <div class="parallax"><img src="img/desk.jpg"></div>       
+          <div class="parallax"><img src="img/desk.jpg"></div>
             <div class="valign-wrapper">
               <h5 class="header flow-text">Give life to your spaces</h5>
             </div>
@@ -197,7 +198,22 @@
         </div>
       </div>
         </div>
-        </div></div></body> 
+        </div></div></body>
+        <script type="text/javascript">
+          function pass(){
+            p1 = document.getElementById('pass1');
+            p2 = document.getElementById('pass2');
+            msg = document.getElementById('msg');
+            if (p1.value != p2.value) {
+              msg.innerHTML="Password don't match";
+            }else{
+              msg.innerHTML="Password match";
+            }
+            if(pass2.value ==""){
+              msg.innerHTML="";
+            }
+          };
+        </script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
 
