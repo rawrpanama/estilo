@@ -19,7 +19,6 @@ $result = mysql_query($consulta);
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="00acc1">
   <title>Estilo</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  </head>
 <body>
  <?php
@@ -28,13 +27,7 @@ include('navbar.html');
     <h3 class="light center">Users maintenance</h3>
     <div class="">
       <div class="row">
-        <div class="collection col s12 m2" style="background-color: #90CAF9;">
-         <a href="adusuarios.php" class="collection-item white-text"><i class="material-icons">contacts</i>User maintenance</a>
-         <a href="ad-new-user.php" class="collection-item black-text"><i class="material-icons">perm_identity</i>Add new user</a>
-         <a href="ad-new-material.php" class="collection-item black-text"><i class="material-icons">polymer</i>Add new material</a>
-         <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
-         <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
-        </div>
+        <?php include 'sidebar.html'; ?>
       <table class="responsive-table col s12 m10 bordered" style="float: right;">
       <thead>
         <tr>

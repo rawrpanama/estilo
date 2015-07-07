@@ -187,7 +187,7 @@
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20130215.jpg">
-          <h5><span class="mp">Max. </span></h5>
+          <h5><span class="mp"></span></h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae incidunt velit blanditiis quis, commodi saepe mollitia quo enim, dolor unde repudiandae quas, inventore ut? Perspiciatis, aut. Incidunt, commodi, non.</p>
           </div>
           <div class="col s4">

@@ -7,19 +7,10 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
     <head>
       <title>Estilo</title>
       <?php include('navbar.html');?>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
       <div class="row">
-        <div class="collection col s12 m2" style="background-color: #90CAF9;">
-         <a href="adusuarios.php" class="collection-item black-text"><i class="material-icons">contacts</i>User maintenance</a>
-         <a href="adusuarios.php" class="collection-item black-text"><i class="material-icons">store</i>See furnitures</a>
-         <a href="ad-new-user.php" class="collection-item black-text"><i class="material-icons">perm_identity</i>Add new user</a>
-         <a href="ad-new-material.php" class="collection-item black-text"><i class="material-icons">polymer</i>Add new material</a>
-         <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
-         <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
-        </div>
-
+<?php include 'sidebar.html'; ?>
       <h3 class="center ">Welcome to the administrator module</h3>
       <!--<div class="container">
         <div class="row">

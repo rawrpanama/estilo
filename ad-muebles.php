@@ -4,27 +4,37 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
 include("php/conexion.php");
 conexion();
-$sql = 
+$sql = 'SELECT * FROM furniture';
+$q = mysql_query($sql);
 ?>
 <html>
     <head>
       <title>Estilo</title>
       <?php include('navbar.html');?>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div class="row">
-          <div class="collection col s12 m2" style="background-color: #90CAF9;">
-           <a href="adusuarios.php" class="collection-item black-text"><i class="material-icons">contacts</i>User maintenance</a>
-           <a href="ad-new-user.php" class="collection-item black-text"><i class="material-icons">perm_identity</i>Add new user</a>
-           <a href="ad-new-material.php" class="collection-item white-text"><i class="material-icons">polymer</i>Add new material</a>
-           <a href="ad-ver-reser.php" class="collection-item black-text"><i class="material-icons">done</i>Reservations</a>
-           <a href="reportes.php" class="collection-item black-text"><i class="material-icons">reorder</i>Reports</a>
+  <?php include 'sidebar.html';
+  while ($row = mysql_fetch_array($q)) {
+  ?>
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-image">
+              <img src="<?php echo $row['img'];?>" class="responsive-img" style="width: 100%; height: 100%;">
+              <span class="card-title"><?php echo $row['nombre'];?></span>
+            </div>
+            <div class="card-content">
+              <p><?php echo $row['descri'];?></p>
+            </div>
+            <div class="card-action">
+              <a href="ad-edit.php?m=<?php echo $row['idmueble']; ?>">Edit</a>
+            </div>
           </div>
-
-
+        </div>
+  <?php
+      }
+  ?>
       </div>
-
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>

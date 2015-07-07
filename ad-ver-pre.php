@@ -12,11 +12,6 @@ $result = mysql_query($consulta);
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen, projection"/>
-  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
-  <link rel="icon" href="img/Logo.png"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <meta name="theme-color" content="00acc1">
   <title>Estilo</title>
   <script type="text/javascript" src="js/modificar.js"></script>
   <script type="text/javascript" src="js/validaciones.js"></script>
