@@ -2,10 +2,10 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
-
+  include("php/conexion.php");
+  conexion();
 $consulta = "SELECT * FROM reserva where iduser='".$id."'";
-$result = $con->query($consulta);
+$result = mysql_query($consulta);
 
 ?>
 <!doctype html>
@@ -55,7 +55,7 @@ include('navbar.html');
         <td><p><?php echo $row['total'];?></p></td>
         <td><p><?php echo $row['estado'];?></p></td>
         <?php } ?>
-        
+
       </tr>
     </table>
       </div>

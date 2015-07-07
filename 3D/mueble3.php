@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-$consulta = 'SELECT * FROM material';
+  include("../php/conexion.php");
+  conexion();
 $result = $con->query($consulta);
 $i = 15;
 ?>
@@ -32,7 +32,7 @@ $i = 15;
 		      </ul>
 		   </div>
 		</nav>
-        
+
         <div id="container"></div>
 
         <script src="build/three.js"></script>
@@ -41,7 +41,7 @@ $i = 15;
         <script type="text/javascript" src="../js/inicio.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
 		<script>
-		
+
 
 		   var container;
 		    var camera, controls, scene, renderer;
@@ -55,7 +55,7 @@ $i = 15;
 		        scene = new THREE.Scene();
 		        //******************************************************************************************************
 		        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-		        
+
 		        camera.position.z=250;
 		     function onWindowResize() {
 
@@ -69,7 +69,7 @@ $i = 15;
 
 			}
 
-				
+
 		        //******************************************************************************************************
 		        controls = new THREE.TrackballControls(camera);
 		        controls.movementSpeed = 200;

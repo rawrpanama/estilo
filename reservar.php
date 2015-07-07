@@ -2,11 +2,11 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-mysql_connect('127.0.0.1', 'root', '');
-mysql_select_db('estilo') or die('Error 404: database not found');
+  include("php/conexion.php");
+  conexion();
 
 $mueble = $_GET['id'];
-$sql = "SELECT precio FROM mueble where idmueble =" .$mueble;
+/*$sql = "SELECT precio FROM mueble where idmueble =" .$mueble;
 $lol = mysql_query($sql);
 $pro = mysql_fetch_array($lol);
 $precio = $pro['precio'];
@@ -20,7 +20,7 @@ $esta = "En cola";
 
 if (isset($mueble)) {
 	$query = "INSERT INTO reserva (total, fecha_ordenado, fecha_entrega, img, iduser, idmueble, estado) VALUES ('".$precio."', '".$fecha."', '".$fecha_entre."', '".$img."','".$id."', '".$mueble."','".$esta."')";
-	mysql_query($query);
+	mysql_query($query);*/
 	?>
 <html lang="es">
 <head>
@@ -69,7 +69,7 @@ include('unavbar.html');
 </body>
 </html>
 <?php
-}	
+}
 }else{
 	  echo '<script> alert("Unauthenticated user"); location.href = "index.php"; </script>';
 }

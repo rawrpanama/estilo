@@ -4,9 +4,10 @@ session_start();
 if(isset($_SESSION['suser']) && $_SESSION['type']) {
   $id = $_SESSION['suser'];
   }
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
-$consulta = 'SELECT * FROM mueble ORDER BY vis DESC LIMIT 10';
-$result = $con->query($consulta);
+  include("php/conexion.php");
+  conexion();
+$consulta = 'SELECT * FROM furniture ORDER BY vis DESC LIMIT 10';
+$result = mysql_query($consulta);
 
 
 ?>
@@ -28,10 +29,10 @@ $result = $con->query($consulta);
  <?php
 include('unavbar.html');
  ?>
- 
+
    <div class="row">
        <?php
-       while($row = mysqli_fetch_array($result)){
+       while($row = mysql_fetch_array($result)){
         ?>
         <div class="col s12 m3 ">
             <div class="card medium">
@@ -47,7 +48,7 @@ include('unavbar.html');
            ?>
             <div class="card-content">
                 <?php
-                echo $row['Descricpion'];
+                echo $row['descri'];
                 ?>
               <div class="card-action">
               <a class="green-text" href="3D/mueble6txt5.php">3D</a>
@@ -57,11 +58,11 @@ include('unavbar.html');
         </div>
         </div>
        <?php
-       } 
+       }
        ?>
      </div>
     </div>
-        
+
 
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>

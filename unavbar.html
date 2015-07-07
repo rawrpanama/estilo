@@ -1,6 +1,6 @@
 <?php
-mysql_connect("localhost", "root", "") or die("Error 404 the Database not found");
-  mysql_select_db("estilo");
+include("php/conexion.php");
+conexion();
   $sql="select usuario from usuario where iduser = $id";
   $query=mysql_query($sql);
 ?>

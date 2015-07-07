@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-mysql_connect('127.0.0.1', 'root', '');
-  mysql_select_db('estilo') or die('Error 404: database not found');
+  include("php/conexion.php");
+  conexion();
  $sql = mysql_query("SELECT * FROM usuario where iduser ='".$id."'");
  $row = mysql_fetch_array($sql);
  $user = $row['usuario'];

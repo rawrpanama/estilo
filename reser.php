@@ -3,9 +3,10 @@ session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
   $mueble = $_GET['m'];
-  $con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('An error has ocurred'.mysqli_connect($con));
-$consulta = "SELECT * FROM mueble where idmueble =" .$mueble;
-$result = $con->query($consulta);
+  include("php/conexion.php");
+  conexion();
+$consulta = "SELECT * FROM furniture where idmueble =" .$mueble;
+$result = mysql_query($consulta);
 ?>
 <!doctype html>
 <html lang="es">
@@ -23,7 +24,7 @@ $result = $con->query($consulta);
 <body>
  <?php
 include('unavbar.html');
-while ($row = mysqli_fetch_array($result)) {
+while ($row = mysql_fetch_array($result)) {
 $pg = mysql_query("SELECT precio from mueble where idmueble=".$mueble);
 $pj = mysql_fetch_array($pg);
 $pre = $pj['precio'];

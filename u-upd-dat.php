@@ -2,10 +2,10 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-
+  include("php/conexion.php");
+  conexion();
 $consulta = "SELECT * FROM usuario WHERE iduser ='".$id."'";
-$result = $con->query($consulta);
+$result = mysql_query($consulta);
 
 ?>
 <!doctype html>
@@ -26,7 +26,7 @@ $result = $con->query($consulta);
 include('unavbar.html');
  ?>
     <h3 class="light center">Modify my data</h3>
-    <?php while ($row = mysqli_fetch_array($result)) {?>
+    <?php while ($row = mysql_fetch_array($result)) {?>
    <div class="container">
         <div class="row">
           <form action="php/u-insertar.php" method="GET" class="col s12">
@@ -42,7 +42,7 @@ include('unavbar.html');
                           <input type="text" id="name" name="name" value="<?php echo $row['nombre'];?>" class="validate" required="required" onkeypress="return letras(event)">
                           <label for="name">Name</label>
                         </div>
-                        <div class="input-field col s12 m6"> 
+                        <div class="input-field col s12 m6">
                           <i class="mdi-action-accessibility prefix"></i>
                           <input type="text" id="ape" name="ape" value="<?php echo $row['apellido'];?>"required="required" onkeypress="return letras(event)">
                           <label for="ape">Last name</label>

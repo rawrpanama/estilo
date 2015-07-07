@@ -2,11 +2,8 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysqli_connect('127.0.0.1', 'root', '', 'estilo') or die('Error en el servidor'.mysqli_connect($con));
-
 $consulta = 'SELECT * FROM usuario';
 $result = $con->query($consulta);
-
 ?>
 <!doctype html>
 <html lang="es">

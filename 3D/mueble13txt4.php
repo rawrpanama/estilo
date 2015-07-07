@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysql_connect('127.0.0.1', 'root','') or die('Error en el servidor');
-mysql_select_db('Estilo');
+  include("../php/conexion.php");
+  conexion();
 $mbid=88;
 $q = mysql_query("SELECT vis FROM mueble WHERE idmueble='".$mbid."'");
 $a = mysql_fetch_array($q);
@@ -36,7 +36,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		      </ul>
 		   </div>
 		</nav>
-        
+
         <div id="container"></div>
 
         <script src="build/three.js"></script>
@@ -45,7 +45,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
         <script type="text/javascript" src="../js/inicio.js"></script>
 		<script src="examples/js/controls/TrackballControls.js"></script>
 		<script>
-		
+
 
 		    var container, stats;
 		    var camera, controls, scene, renderer;
@@ -59,7 +59,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		        scene = new THREE.Scene();
 		        //******************************************************************************************************
 		        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
-		        
+
 		        camera.position.z=500;
 		     function onWindowResize() {
 
@@ -119,7 +119,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		    }
 
 		</script>
-       
+
 	</body>
 	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 		      <a class="btn-floating btn-large red">
@@ -136,4 +136,3 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
   echo '<script> alert("Usuario no autenticado"); location.href = "../index.php"; </script>';
 }
   ?>
-	
