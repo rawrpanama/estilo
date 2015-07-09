@@ -1,6 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['suser'])) {
+  $id=$_SESSION['suser'];
   include("../php/conexion.php");
   conexion();
 $mbid=23;

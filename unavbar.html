@@ -10,17 +10,18 @@ conexion();
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link rel="icon" href="img/Logo.png"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-      <meta name="theme-color" content="00acc1">
+      <meta name="theme-color" content="#00bcd4">
 
         <div class="navbar">
-          <nav class="cyan darken-1">
+          <nav class="cyan">
             <div class="nav-wrapper">
               <a href="muebles.php" class="brand-logo">Estilo</a>
               <!--Narbar normal-->
               <ul class="right hide-on-med-and-down">
-                <li><a class="dropdown-button" href="muebles.php" data-activates="dropdown1">Furniture<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
+                <li><a href="reservar.php" class="collection-item black-text waves-effect white-text"><i class="material-icons">shopping_cart</i></a></li>
                 <li><a href="muebles.php">Home</a></li>
                 <li><a href="popu.php">Popular</a></li>
+                  <li><a class="dropdown-button" href="muebles.php" data-activates="dropdown1">Furniture<i class="mdi-navigation-arrow-drop-down right"></i></a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown2"><?php  while($datos=mysql_fetch_array($query)){echo $datos['usuario'];}?><i class="mdi-navigation-arrow-drop-down right"></i></a></li>
               </ul>
               <!--Narbar móvil-->
@@ -44,7 +45,7 @@ conexion();
                 <li class="divider"></li>
                 <li><a href="my-profile.php">My Profile</a></li>
               </ul>
-              <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+              <a href="#" data-activates="nav-mobile" class="button-collapse white-text"><i class="mdi-navigation-menu"></i></a>
             </div>
           </nav>
         </div>

@@ -13,5 +13,5 @@ session_start();
 				$total =($car[$i]['price']*$car[$i]['quanti'])+$total;
 			}
 			$_SESSION['carro']=$car;
-			echo $total;
+			echo "$".$total;
 ?>

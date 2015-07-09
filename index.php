@@ -5,7 +5,7 @@
       <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
       <link rel="icon" href="img/Logo.png"/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-      <meta name="theme-color" content="00acc1">
+      <meta name="theme-color" content="#00bcd4">
       <script type="text/javascript" src="js/validaciones.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
       <script type="text/javascript" src="js/typed.js"></script>
@@ -73,7 +73,7 @@
               <a class="waves-effect waves-light btn modal-trigger blue col s12" href="#regis-ml">Sign up</a>
               <a class="waves-effect waves-light btn modal-trigger blue col s12" href="#ini-ml">Sign in</a>
             <!-- Modal que abre -->
-			
+
             <div id="ini-ml" class="modal">
                 <div class="modal-content">
                   <h5 class="center">Sign in</h4>
@@ -165,12 +165,12 @@
                 </div>
                   </div>
                 </div>
-     
+
               </div>
               </form>
 			  </div>
 			  </div>
-			  
+
 
         <div class="parallax-container valign-wrapper">
           <div class="parallax"><img src="img/desk.jpg"></div>

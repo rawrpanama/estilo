@@ -16,34 +16,43 @@ $q = mysql_query($sql);
     <body>
       <div class="row">
         <?php include 'sidebar.html';
+        ?>
+        <table class="responsive-table col s12 m10 bordered" style="float: right;">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Price</td>
+            <th>Vis</th>
+          </tr>
+       </thead>
+        <?php
         while ($row = mysql_fetch_array($q)) {
         ?>
-                <div class="col s12 m7">
-                  <div class="card">
-                    <div class="card-image">
-                      <img src="<?php echo $row['img'];?>" class="responsive-img">
-                      <div class="input-field col s12 m6 card-title">
-                        <input type="text" id="name" name="name"  class="validate" required="required" value="<?php echo $row['nombre'] ?> " onkeypress="return letras(event)">
-                        <label for="name">Name</label>
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <div class="input-field col s12 m6 card-title">
-                        <textarea id="textarea1" class="materialize-textarea">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-                        <label for="textarea1">Textarea</label>
-                      </div>
-                    </div>
-                    <div class="card-action">
-                      <a href="ad-edit.php?m=<?php echo $row['idmueble']; ?>">Edit</a>
-                    </div>
-                  </div>
-                </div>
+        <tr>
+          <td><input type="text" id="idm" value="<?php echo $row['idmueble'];?>"></td>
+          <td><input type="text" id="name" value="<?php echo $row['nombre'];?>" onkeypress="return letras(event)"></td>
+          <!--<td><input type="text" id="ape" value="" onkeypress="return letras(event)"></td>-->
+          <td><div class="input-field col s12">
+          <textarea id="descri" class="materialize-textarea"><?php  echo $row['descri'];?></textarea>
+          <label for="textarea1">Textarea</label>
+        </div></td>
+          <td><input type="text" id="tipo" value="<?php echo $row['tipo'];?>"></td>
+          <td><input type="text" id="precio" value="<?php echo $row['precio'];?>" onkeypress="return num(event)"></td>
+          <td><input type="text" id="vis" value="<?php echo $row['vis'];?>" onkeypress="return num(event)"></td>
+          <td><button class="delete waves-effect waves-light btn" data-id="<?php echo $row['idmueble'];?>">Delete</button></td>
+          <td><button class="modify waves-effect waves-light btn" data-id="<?php echo $row['idmueble'];?>">Modify</button></td>
+        </tr>
         <?php
             }
         ?>
-
+   </table>
       </div>
+      <script type="text/javascript" src="js/validaciones.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+      <script type="text/javascript" src="js/modificar.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
     </body>
