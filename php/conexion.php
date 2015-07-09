@@ -1,5 +1,4 @@
 <?php
-//mysql_connect("localhost", "root", "");	
 function conexion(){
 	$server = "127.0.0.1";
 	$user = "root";

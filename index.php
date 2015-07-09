@@ -69,13 +69,11 @@
           <div class="container">
             <div class="row">
               <h4 class="center light flow-text">Start customizing your own furniture, the only thing you have to do is sign in or sign up if you don't have an user.</h4>
-              <div class="col s6 offset-m3">
                 <!-- Botón modal -->
-                <center>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#regis-ml">Sign up</a>
-              <a class="waves-effect waves-light btn modal-trigger blue" href="#ini-ml">Sign in</a>
-            </center>
+              <a class="waves-effect waves-light btn modal-trigger blue col s12" href="#regis-ml">Sign up</a>
+              <a class="waves-effect waves-light btn modal-trigger blue col s12" href="#ini-ml">Sign in</a>
             <!-- Modal que abre -->
+			
             <div id="ini-ml" class="modal">
                 <div class="modal-content">
                   <h5 class="center">Sign in</h4>
@@ -155,6 +153,7 @@
                           <label for="dui">ID</label>
                         </div>
                       </div>
+					  </div>
                       <blockquote id="msg"></blockquote>
 
                 <div class="modal-footer">
@@ -166,9 +165,12 @@
                 </div>
                   </div>
                 </div>
+     
               </div>
-              </div>
-              </form></div></h5></div></div></form></div></h5></div></div></div></div>
+              </form>
+			  </div>
+			  </div>
+			  
 
         <div class="parallax-container valign-wrapper">
           <div class="parallax"><img src="img/desk.jpg"></div>

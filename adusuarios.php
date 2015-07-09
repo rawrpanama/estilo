@@ -60,8 +60,8 @@ include('navbar.html');
     </div>
   </div>
       <script type="text/javascript" src="js/validaciones.js"></script>
-      <script type="text/javascript" src="js/modificar.js"></script>
       <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+      <script type="text/javascript" src="js/modificar.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
 </body>

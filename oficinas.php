@@ -2,8 +2,7 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$consulta = 'SELECT * FROM usuario';
-$result = $con->query($consulta);
+
 ?>
 <!doctype html>
 <html lang="es">

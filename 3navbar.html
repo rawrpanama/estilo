@@ -1,5 +1,5 @@
 <?php
-include("php/conexion.php");
+require_once("php/conexion.php");
 conexion();
   $sql="select usuario from usuario where iduser = $id";
   $query=mysql_query($sql);
@@ -12,7 +12,7 @@ conexion();
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
       <meta name="theme-color" content="00acc1">
 
-        <div class="navbar-fixed">
+        <div class="navbar">
           <nav class="cyan darken-1">
             <div class="nav-wrapper">
               <a href="../muebles.php" class="brand-logo">Estilo</a>
