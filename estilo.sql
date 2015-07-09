@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.11
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 19, 2015 at 02:11 AM
--- Server version: 5.6.21
--- PHP Version: 5.6.3
+-- Servidor: localhost
+-- Tiempo de generación: 09-07-2015 a las 06:39:07
+-- Versión del servidor: 5.5.24-log
+-- Versión de PHP: 5.4.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,31 +17,32 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `estilo`
+-- Base de datos: `estilo`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `furniture`
+-- Estructura de tabla para la tabla `furniture`
 --
 
 CREATE TABLE IF NOT EXISTS `furniture` (
-`idmueble` int(5) NOT NULL,
+  `idmueble` int(5) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
-  `Descricpion` varchar(500) NOT NULL,
+  `descri` varchar(500) NOT NULL,
   `tipo` varchar(50) NOT NULL,
   `precio` double NOT NULL,
   `img` varchar(250) NOT NULL,
-  `vis` int(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=latin1;
+  `vis` int(10) NOT NULL,
+  PRIMARY KEY (`idmueble`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
 
 --
--- Dumping data for table `furniture`
+-- Volcado de datos para la tabla `furniture`
 --
 
-INSERT INTO `furniture` (`idmueble`, `nombre`, `Descricpion`, `tipo`, `precio`, `img`, `vis`) VALUES
-(1, 'Stand ', 'Kitchen cabinet, has 6 doors vertically, with a finish in melamine Wenge teak color.', 'Office', 40, 'img/muebles/mueble1.png', 33),
+INSERT INTO `furniture` (`idmueble`, `nombre`, `descri`, `tipo`, `precio`, `img`, `vis`) VALUES
+(1, 'Stand ', 'Kitchen cabinet, has 6 doors vertically, with a finish in melamine Wenge teak color. Very cheap, and comfortable.', 'Office', 120, 'img/muebles/mueble1.png', 20),
 (2, 'Stand', 'Kitchen cabinet, has 6 doors vertically, with a finish in melamine Birch color.', 'Office', 35, 'img/muebles/mueble1txt2.png', 10),
 (3, 'Stand', 'Kitchen cabinet, has 6 doors vertically, with a color Toronto Maple melamine finish.', 'office', 60, 'img/muebles/mueble1txt3.png\r\n', 18),
 (4, 'Stand', 'Kitchen cabinet, has 6 doors vertically, with a melamine Dark Oak finish.', 'Office', 60, 'img/muebles/mueble1txt4.png\r\n', 7),
@@ -49,7 +50,7 @@ INSERT INTO `furniture` (`idmueble`, `nombre`, `Descricpion`, `tipo`, `precio`, 
 (6, 'Stand', 'Kitchen cabinet, has 6 doors vertically, with a white melamine finish.', 'Office', 50, 'img/muebles/mueble1txt6.png\r\n', 3),
 (7, 'Stand', 'Kitchen cabinet, has 6 doors vertically, with a melamine color ash finish.', 'Office', 80, 'img/muebles/mueble1txt7.png\r\n', 8),
 (8, 'Mueble', '10 cabinets and three drawers for kitchen, a textured melamine teak Wenge color.', 'Kitchen', 950, 'img/muebles/mueble2.png\r\n', 15),
-(9, 'Mueble', '10 cabinets and three drawers for kitchen, with a texture of melamine color Birch.', 'Kitchen', 120, 'img/muebles/mueble2txt2.png\r\n', 4),
+(9, 'Mueble', '10 cabinets and three drawers for kitchen, with a texture of melamine color Birch. ', 'Kitchen', 150, 'img/muebles/mueble2txt2.png\r\n', 4),
 (10, 'Mueble', '10 cabinets and three drawers for kitchen, with a texture of melamine Toronto Maple color.', 'Kitchen', 120, 'img/muebles/mueble2txt3.png\r\n', 7),
 (11, 'Mueble', '10 cabinets and three drawers for kitchen, with a texture of Dark Oak melamine.', 'Kitchen', 120, 'img/muebles/mueble2txt4.png\r\n', 4),
 (12, 'Mueble', '10 cabinets and three drawers for kitchen, a textured color Cherry melamine.', 'Kitchen', 120, 'img/muebles/mueble2txt5.png\r\n', 5),
@@ -136,68 +137,71 @@ INSERT INTO `furniture` (`idmueble`, `nombre`, `Descricpion`, `tipo`, `precio`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `materi`
+-- Estructura de tabla para la tabla `materi`
 --
 
 CREATE TABLE IF NOT EXISTS `materi` (
-`idmaterial` int(5) NOT NULL,
+  `idmaterial` int(5) NOT NULL AUTO_INCREMENT,
   `material` varchar(50) NOT NULL,
   `tipo` varchar(25) NOT NULL,
   `precio` double NOT NULL,
   `codigo` varchar(100) NOT NULL,
-  `img` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `img` varchar(250) NOT NULL,
+  PRIMARY KEY (`idmaterial`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `material`
+-- Estructura de tabla para la tabla `material`
 --
 
 CREATE TABLE IF NOT EXISTS `material` (
-`idmaterial` int(5) NOT NULL,
+  `idmaterial` int(5) NOT NULL AUTO_INCREMENT,
   `material` varchar(50) NOT NULL,
   `tipo` varchar(25) NOT NULL,
   `precio` double NOT NULL,
   `codigo` varchar(100) NOT NULL,
-  `img` varchar(250) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
+  `img` varchar(250) NOT NULL,
+  PRIMARY KEY (`idmaterial`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
--- Dumping data for table `material`
+-- Volcado de datos para la tabla `material`
 --
 
 INSERT INTO `material` (`idmaterial`, `material`, `tipo`, `precio`, `codigo`, `img`) VALUES
-(27, 'Vintage wood', 'wood', 1.5, 'VW001', '../img/materiales/madera.jpg'),
-(28, 'Textura de madera', 'Madera', 0.25, 'TXT02', '../img/materiales/textura2.png'),
-(29, 'Textura de madera 3', 'Madera', 0.25, 'TXT03', '../img/materiales/textura3.png'),
-(30, 'Textura de madera 4', 'Madera', 0.25, 'TXT04', '../img/materiales/textura4.png'),
-(31, 'Textura de madera 5', 'Madera', 0.25, 'TXT05', '../img/materiales/textura5.png'),
-(32, 'Textura de madera 6', 'Madera', 0.25, 'TXT06', '../img/materiales/textura6.png'),
-(33, 'Textura de madera 7', 'Madera', 0.25, 'TXT07', '../img/materiales/textura7.png');
+(27, 'Melamina Color Wengue Teca', 'wood', 1.5, 'VW001', '../img/materiales/madera.jpg'),
+(28, 'Melamina Color Abedul', 'Madera', 0.25, 'TXT02', '../img/materiales/textura2.png'),
+(29, 'Melamina Color Maple Toronto', 'Madera', 0.25, 'TXT03', '../img/materiales/textura3.png'),
+(30, 'Melamina Color Roble', 'Madera', 0.25, 'TXT04', '../img/materiales/textura4.png'),
+(31, 'Melamina Color Cerezo', 'Madera', 0.25, 'TXT05', '../img/materiales/textura5.png'),
+(32, 'Melamina Color Blanco', 'Madera', 0.25, 'TXT06', '../img/materiales/textura6.png'),
+(33, 'Melamina Color Fresno', 'Madera', 0.25, 'TXT07', '../img/materiales/textura7.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mueble`
+-- Estructura de tabla para la tabla `mueble`
 --
 
 CREATE TABLE IF NOT EXISTS `mueble` (
-`idmueble` int(5) NOT NULL,
+  `idmueble` int(5) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `descri` varchar(500) NOT NULL,
   `tipo` varchar(50) NOT NULL,
   `precio` double DEFAULT NULL,
   `img` varchar(250) DEFAULT NULL,
-  `vis` int(10) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=latin1;
+  `vis` int(10) DEFAULT NULL,
+  PRIMARY KEY (`idmueble`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=92 ;
 
 --
--- Dumping data for table `mueble`
+-- Volcado de datos para la tabla `mueble`
 --
 
 INSERT INTO `mueble` (`idmueble`, `nombre`, `descri`, `tipo`, `precio`, `img`, `vis`) VALUES
-(1, 'Stand', 'Gabinete para cocina, posee 6 puertas en vertical, con jaladeras en forma de botones, con una textura de Melamina color Wengue Teca', 'Oficina', 80, 'img/muebles/mueble1.png', 1),
+(1, 'Stand', 'Gabinete para cocina, posee 6 puertas en vertical, con jaladeras en forma de botones, con una textura de Melamina color Wengue Teca', 'Oficina', 80, 'img/muebles/mueble1.png', 2),
 (2, 'Stand', 'Gabinete para cocina, posee 6 puertas en vertical, con jaladeras en forma de botones, con una textura de Melamina color Abedul', 'Oficina', 80, 'img/muebles/mueble1txt2.png', NULL),
 (3, 'Stand', 'Gabinete para cocina, posee 6 puertas en vertical, con jaladeras en forma de botones, con una textura de Melamina color Maple de Toronto', 'Oficina', 80, 'img/muebles/mueble1txt3.png', NULL),
 (4, 'Stand', 'Gabinete para cocina, posee 6 puertas en vertical, con jaladeras en forma de botones, con una textura de Melamina color Roble', 'Oficina', 80, 'img/muebles/mueble1txt4.png', NULL),
@@ -218,25 +222,25 @@ INSERT INTO `mueble` (`idmueble`, `nombre`, `descri`, `tipo`, `precio`, `img`, `
 (19, 'Armario', '', 'Closets', 150, 'img/muebles/mueble3txt5.png', NULL),
 (20, 'Armario', '', 'Closets', 150, 'img/muebles/mueble3txt6.png', NULL),
 (21, 'Armario', '', 'Closets', 150, 'img/muebles/mueble3txt7.png', NULL),
-(22, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Wengue Teca', 'Oficina', 180, 'img/muebles/mueble4.png', NULL),
-(23, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Abedul', 'Oficina', 180, 'img/muebles/mueble4txt2.png', NULL),
-(24, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Maple de Toronto', 'Oficina', 180, 'img/muebles/mueble4txt3.png', NULL),
+(22, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Wengue Teca', 'Oficina', 180, 'img/muebles/mueble4.png', 1),
+(23, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Abedul', 'Oficina', 180, 'img/muebles/mueble4txt2.png', 15),
+(24, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Maple de Toronto', 'Oficina', 180, 'img/muebles/mueble4txt3.png', 2),
 (25, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Roble', 'Oficina', 180, 'img/muebles/mueble4txt4.png', NULL),
 (26, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Cerezo', 'Oficina', 180, 'img/muebles/mueble4txt5.png', NULL),
 (27, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Blanco', 'Oficina', 180, 'img/muebles/mueble4txt6.png', NULL),
 (28, 'Gabinete', 'Gabinete para cocina o closets, con jaladeras en forma de botones y jaladeras normales, posee de 3 gavetas y 5 puertas en vertical, con textura de Melamina color Fresno', 'Oficina', 180, 'img/muebles/mueble4txt7.png', NULL),
-(29, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Wengue Teca', 'Oficina', 200, 'img/muebles/mueble5.png\r\n', NULL),
+(29, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Wengue Teca', 'Oficina', 200, 'img/muebles/mueble5.png\r\n', 4),
 (30, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Abedul', 'Oficina', 200, 'img/muebles/mueble5txt2.png', NULL),
 (31, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Maple de Toronto', 'Oficina', 200, 'img/muebles/mueble5txt3.png', NULL),
 (32, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Roble', 'Oficina', 200, 'img/muebles/mueble5txt4.png', NULL),
 (33, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Cerezo', 'Oficina', 200, 'img/muebles/mueble5txt5.png', NULL),
 (34, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Blanco', 'Oficina', 200, 'img/muebles/mueble5txt6.png', NULL),
 (35, 'Escritorio', 'Escritorio ejecutivo, con textura de Melamina Color Fresno', 'Oficina', 200, 'img/muebles/mueble5txt7.png', NULL),
-(36, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Wengue Teca, 4 gavetas y 4 puertas con jaladeras.', 'Oficina', 250, 'img/muebles/mueble6.png', NULL),
+(36, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Wengue Teca, 4 gavetas y 4 puertas con jaladeras.', 'Oficina', 250, 'img/muebles/mueble6.png', 6),
 (37, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Abedul, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt2.png', NULL),
 (38, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Maple de Toronto, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt3.png', NULL),
 (39, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Roble, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt4.png', NULL),
-(40, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Cerezo, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt5.png', NULL),
+(40, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Cerezo, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt5.png', 3),
 (41, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Blanco, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt6.png', NULL),
 (42, 'Gabinete', 'Mueble para oficina,con textura de Melamina color Fresno, 4 gavetas y 4 puertas con jaladeras', 'Oficina', 250, 'img/muebles/mueble6txt7.png', NULL),
 (43, 'Stand', 'Mueble para baño,con textura de Melamina color Wengue Teca, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7.png', NULL),
@@ -245,44 +249,89 @@ INSERT INTO `mueble` (`idmueble`, `nombre`, `descri`, `tipo`, `precio`, `img`, `
 (46, 'Stand', 'Mueble para baño,con textura de Melamina color Roble, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7txt4.png', NULL),
 (47, 'Stand', 'Mueble para baño,con textura de Melamina color Cerezo, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7txt5.png', NULL),
 (48, 'Stand', 'Mueble para baño,con textura de Melamina color Blanco, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7txt6.png', NULL),
-(49, 'Stand', 'Mueble para baño,con textura de Melamina color Fresno, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7txt7.png', NULL);
+(49, 'Stand', 'Mueble para baño,con textura de Melamina color Fresno, tiene cuadro repisas, y dos pequeñas puertas.', 'Baño', 140, 'img/muebles/mueble7txt7.png', NULL),
+(50, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con textura color wengue melamina teca.', 'Closet', 650, 'img/muebles/mueble8.png', 2),
+(51, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con textura color abedul melamina.', 'Closet', 650, 'img/muebles/mueble8txt2.png', 0),
+(52, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con textura color arce melamina.', 'Closet', 650, 'img/muebles/mueble8txt3.png', 0),
+(53, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con melamina textura color roble.', 'Closet', 650, 'img/muebles/mueble8txt4.png', 0),
+(54, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con melamina textura color cereza.', 'Closet', 650, 'img/muebles/mueble8txt5.png', 0),
+(55, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con melamina textura color color blanco.', 'Closet', 650, 'img/muebles/mueble8txt6.png', 0),
+(56, 'Closet', 'Armario con pequeños cajones y puertas con pequeños estampados, con melamina textura color fresno.', 'Closet', 650, 'img/muebles/mueble8txt7.png', 1),
+(57, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color Wengue Teca.', 'Baño', 550, 'img/muebles/mueble9.png', 0),
+(58, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color abedul.', 'Baño', 550, 'img/muebles/mueble9txt2.png', 0),
+(59, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color arce.', 'Baño', 550, 'img/muebles/mueble9txt3.png', 0),
+(60, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color roble.', 'Baño', 550, 'img/muebles/mueble9txt4.png', 0),
+(61, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color cereza.', 'Baño', 550, 'img/muebles/mueble9txt5.png', 0),
+(62, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color blanco.', 'Baño', 550, 'img/muebles/mueble9txt6.png', 0),
+(63, 'Stand', 'Tocador para dormitorios, con la textura de Melamina color fresno.', 'Baño', 550, 'img/muebles/mueble9txt7.png', 0),
+(64, 'Isla', 'Cocina isla con textura de color de la melamina de Wenge teca.', 'Cocina', 750, 'img/muebles/mueble10.png', 4),
+(65, 'Isla', 'Cocina isla con textura de color de la melamina de abedul.', 'Cocina', 750, 'img/muebles/mueble10txt2.png', 0),
+(66, 'Isla', 'Cocina isla con textura de color de la melamina de arce.', 'Cocina', 750, 'img/muebles/mueble10txt3.png', 0),
+(67, 'Isla', 'Cocina isla con textura de color de la melamina de roble.', 'Cocina', 750, 'img/muebles/mueble10txt4.png', 0),
+(68, 'Isla', 'Cocina isla con textura de color de la melamina de cereza.', 'Cocina', 750, 'img/muebles/mueble10txt5.png', 0),
+(69, 'Isla', 'Cocina isla con textura de color de la melamina de blanco.', 'Cocina', 750, 'img/muebles/mueble10txt6.png', 0),
+(70, 'Isla', 'Cocina isla con textura de color de la melamina de fresno.', 'Cocina', 750, 'img/muebles/mueble10txt7.png', 0),
+(71, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de Wenge teca.', 'Baño', 450, 'img/muebles/mueble11.png', 4),
+(72, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de Abedul.', 'Baño', 450, 'img/muebles/mueble11txt2.png', 0),
+(73, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de Arce', 'Baño', 450, 'img/muebles/mueble11txt3.png', 0),
+(74, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de Roble.', 'Baño', 450, 'img/muebles/mueble11txt4.png', 0),
+(75, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de cereza.', 'Baño', 450, 'img/muebles/mueble11txt5.png', 0),
+(76, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de blanco.', 'Baño', 450, 'img/muebles/mueble11txt6.png', 0),
+(77, 'Mueble', 'Muebles auxiliares para oficina o cuarto de baño, 3 cajones con manijas y 3 estantes, con una textura de color de la melamina de fresno.', 'Baño', 450, 'img/muebles/mueble11txt7.png', 0),
+(78, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina Wenge teca.', 'Oficina', 250, 'img/muebles/mueble12.png', 0),
+(79, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina abedul.', 'Oficina', 250, 'img/muebles/mueble12txt2.png', 0),
+(80, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina arce.', 'Oficina', 250, 'img/muebles/mueble12txt3.png', 0),
+(81, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina roble.', 'Oficina', 250, 'img/muebles/mueble12txt4.png', 0),
+(82, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina cereza.', 'Oficina', 250, 'img/muebles/mueble12txt5.png', 0),
+(83, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina blanco.', 'Oficina', 250, 'img/muebles/mueble12txt6.png', 0),
+(84, 'Estante', 'Muebles para oficina o armarios con estantes, textura de color de la melamina fresno.', 'Oficina', 250, 'img/muebles/mueble12txt7.png', 0),
+(85, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina Wenge teca.', 'Baño', 350, 'img/muebles/mueble13.png', 0),
+(86, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina abedul.', 'Baño', 350, 'img/muebles/mueble13txt2.png', 0),
+(87, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina arce.', 'Baño', 350, 'img/muebles/mueble13txt3.png', 0),
+(88, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina roble.', 'Baño', 350, 'img/muebles/mueble13txt4.png', 0),
+(89, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina cereza.', 'Baño', 350, 'img/muebles/mueble13txt5.png', 0),
+(90, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina blanco.', 'Baño', 350, 'img/muebles/mueble13txt6.png', 0),
+(91, 'Baño', 'Gabinete, con dos cajones y sus asas en forma de botones, con una amplia cornisa y una pequeña puerta, con textura color melamina fresno.', 'Baño', 350, 'img/muebles/mueble13txt7.png', 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `piece`
+-- Estructura de tabla para la tabla `piece`
 --
 
 CREATE TABLE IF NOT EXISTS `piece` (
-`idpieza` int(5) NOT NULL,
+  `idpieza` int(5) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `cantidad` int(5) NOT NULL,
   `alto` varchar(5) NOT NULL,
   `ancho` varchar(5) NOT NULL,
   `precio` double NOT NULL,
   `idmaterial` int(11) DEFAULT NULL,
-  `idmueble` int(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `idmueble` int(5) DEFAULT NULL,
+  PRIMARY KEY (`idpieza`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pieza`
+-- Estructura de tabla para la tabla `pieza`
 --
 
 CREATE TABLE IF NOT EXISTS `pieza` (
-`idpieza` int(5) NOT NULL,
+  `idpieza` int(5) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) NOT NULL,
   `cantidad` int(5) NOT NULL,
   `alto` varchar(5) NOT NULL,
   `ancho` varchar(5) NOT NULL,
   `precio` double NOT NULL,
   `idmaterial` int(11) NOT NULL,
-  `idmueble` int(5) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=138 DEFAULT CHARSET=latin1;
+  `idmueble` int(5) NOT NULL,
+  PRIMARY KEY (`idpieza`),
+  KEY `idmaterial` (`idmaterial`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=138 ;
 
 --
--- Dumping data for table `pieza`
+-- Volcado de datos para la tabla `pieza`
 --
 
 INSERT INTO `pieza` (`idpieza`, `nombre`, `cantidad`, `alto`, `ancho`, `precio`, `idmaterial`, `idmueble`) VALUES
@@ -414,28 +463,55 @@ INSERT INTO `pieza` (`idpieza`, `nombre`, `cantidad`, `alto`, `ancho`, `precio`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reserva`
+-- Estructura de tabla para la tabla `reserva`
 --
 
 CREATE TABLE IF NOT EXISTS `reserva` (
-`idreserva` int(5) NOT NULL,
+  `idreserva` int(5) NOT NULL AUTO_INCREMENT,
   `total` double NOT NULL,
   `fecha_ordenado` date NOT NULL,
   `fecha_entrega` date NOT NULL,
   `img` varchar(250) NOT NULL,
   `iduser` int(5) NOT NULL,
   `idmueble` int(5) NOT NULL,
-  `estado` text NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+  `estado` text NOT NULL,
+  `orden` varchar(10) NOT NULL,
+  `canti` int(11) NOT NULL,
+  PRIMARY KEY (`idreserva`),
+  KEY `iduser` (`iduser`),
+  KEY `idmueble` (`idmueble`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Volcado de datos para la tabla `reserva`
+--
+
+INSERT INTO `reserva` (`idreserva`, `total`, `fecha_ordenado`, `fecha_entrega`, `img`, `iduser`, `idmueble`, `estado`, `orden`, `canti`) VALUES
+(1, 650, '2015-07-07', '2015-06-25', 'img/muebles/mueble8.png', 10, 50, 'Production', '', 0),
+(2, 240, '2015-07-09', '2015-07-23', 'img/muebles/mueble11.png', 7, 71, 'queued', '1275246837', 4),
+(3, 1250, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '1275246837', 5),
+(6, 240, '2015-07-09', '2015-07-23', 'img/muebles/mueble11.png', 7, 71, 'queued', '617936379', 4),
+(7, 1250, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '617936379', 5),
+(8, 240, '2015-07-09', '2015-07-23', 'img/muebles/mueble11.png', 7, 71, 'queued', '1084443919', 4),
+(9, 1250, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '1084443919', 5),
+(10, 250, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '91829822', 1),
+(11, 500, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '505322207', 2),
+(12, 500, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '464571111', 2),
+(13, 240, '2015-07-09', '2015-07-23', 'img/muebles/mueble11.png', 7, 71, 'queued', '142736419', 4),
+(14, 1250, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '142736419', 5),
+(15, 750, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '1243059065', 3),
+(16, 750, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '680418525', 3),
+(17, 750, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '580283570', 3),
+(18, 1000, '2015-07-09', '2015-07-23', 'img/muebles/mueble6.png', 7, 36, 'queued', '1095029737', 4);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `usuario` (
-`iduser` int(5) NOT NULL,
+  `iduser` int(5) NOT NULL AUTO_INCREMENT,
   `usuario` varchar(25) NOT NULL,
   `nombre` varchar(25) NOT NULL,
   `apellido` varchar(25) NOT NULL,
@@ -443,130 +519,34 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `correo` varchar(50) NOT NULL,
   `telefono` varchar(9) NOT NULL,
   `dui` varchar(10) NOT NULL,
-  `tipo` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+  `tipo` varchar(10) NOT NULL,
+  PRIMARY KEY (`iduser`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
--- Dumping data for table `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`iduser`, `usuario`, `nombre`, `apellido`, `contra`, `correo`, `telefono`, `dui`, `tipo`) VALUES
 (7, 'imaxpanama', 'Max', 'Panama', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'maxpanama97@gmail.com', '22785675', '012345678', 'admin'),
-(10, 'umarin', 'Carlos', 'Marin', '12dea96fec20593566ab75692c9949596833adc9', 'marin@gmail.com', '77658231', '0123456789', 'user'),
-(13, 'Andres', 'Jose', 'Mata', 'f51fabbca8cc1a8bef111911e7bfa350a8ed2d34', 'andresmata@hotmail.com', '77456633', '0123456789', 'user');
+(10, 'umarin', 'Carlos', 'Marin', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'carlos@gmail.com', '77658231', '0123456789', '');
 
 --
--- Indexes for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Indexes for table `furniture`
---
-ALTER TABLE `furniture`
- ADD PRIMARY KEY (`idmueble`);
-
---
--- Indexes for table `materi`
---
-ALTER TABLE `materi`
- ADD PRIMARY KEY (`idmaterial`);
-
---
--- Indexes for table `material`
---
-ALTER TABLE `material`
- ADD PRIMARY KEY (`idmaterial`);
-
---
--- Indexes for table `mueble`
---
-ALTER TABLE `mueble`
- ADD PRIMARY KEY (`idmueble`);
-
---
--- Indexes for table `piece`
---
-ALTER TABLE `piece`
- ADD PRIMARY KEY (`idpieza`);
-
---
--- Indexes for table `pieza`
+-- Filtros para la tabla `pieza`
 --
 ALTER TABLE `pieza`
- ADD PRIMARY KEY (`idpieza`), ADD KEY `idmaterial` (`idmaterial`);
+  ADD CONSTRAINT `pieza_ibfk_1` FOREIGN KEY (`idmaterial`) REFERENCES `material` (`idmaterial`);
 
 --
--- Indexes for table `reserva`
+-- Filtros para la tabla `reserva`
 --
 ALTER TABLE `reserva`
- ADD PRIMARY KEY (`idreserva`), ADD KEY `iduser` (`iduser`), ADD KEY `idmueble` (`idmueble`);
-
---
--- Indexes for table `usuario`
---
-ALTER TABLE `usuario`
- ADD PRIMARY KEY (`iduser`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `furniture`
---
-ALTER TABLE `furniture`
-MODIFY `idmueble` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=92;
---
--- AUTO_INCREMENT for table `materi`
---
-ALTER TABLE `materi`
-MODIFY `idmaterial` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `material`
---
-ALTER TABLE `material`
-MODIFY `idmaterial` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=34;
---
--- AUTO_INCREMENT for table `mueble`
---
-ALTER TABLE `mueble`
-MODIFY `idmueble` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=50;
---
--- AUTO_INCREMENT for table `piece`
---
-ALTER TABLE `piece`
-MODIFY `idpieza` int(5) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `pieza`
---
-ALTER TABLE `pieza`
-MODIFY `idpieza` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=138;
---
--- AUTO_INCREMENT for table `reserva`
---
-ALTER TABLE `reserva`
-MODIFY `idreserva` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
---
--- AUTO_INCREMENT for table `usuario`
---
-ALTER TABLE `usuario`
-MODIFY `iduser` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `pieza`
---
-ALTER TABLE `pieza`
-ADD CONSTRAINT `pieza_ibfk_1` FOREIGN KEY (`idmaterial`) REFERENCES `material` (`idmaterial`);
-
---
--- Constraints for table `reserva`
---
-ALTER TABLE `reserva`
-ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `usuario` (`iduser`),
-ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`idmueble`) REFERENCES `furniture` (`idmueble`);
+  ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`iduser`) REFERENCES `usuario` (`iduser`),
+  ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`idmueble`) REFERENCES `furniture` (`idmueble`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
