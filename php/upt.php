@@ -6,7 +6,7 @@ $idm = $_GET['id'];
 echo $idm;
 
 if (isset($idm)){
-	$estado = "En producción";
+	$estado = "Production";
 	$sql = "UPDATE reserva set estado='$estado' where idmueble = '$idm'";
 	$usu = mysql_query($sql);
 	echo "<script>Alert('modified successfully')</script>";
