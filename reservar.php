@@ -54,21 +54,11 @@ if (isset($_SESSION['carro'])) {
     $_SESSION['carro'] = $car;
   }
 }
-/*$sql = "SELECT precio FROM mueble where idmueble =" .$mueble;
-$lol = mysql_query($sql);
-$pro = mysql_fetch_array($lol);
-$precio = $pro['precio'];
-$sql1 = "SELECT img FROM mueble where idmueble =" .$mueble;
-$lal = mysql_query($sql1);
-$pre = mysql_fetch_array($lal);
-$img = $pre['img'];
-$fecha = date('Y/m/d');
-$fecha_entre = "2015-06-25";
-$esta = "En cola";
-
-if (isset($mueble)) {
-	$query = "INSERT INTO reserva (total, fecha_ordenado, fecha_entrega, img, iduser, idmueble, estado) VALUES ('".$precio."', '".$fecha."', '".$fecha_entre."', '".$img."','".$id."', '".$mueble."','".$esta."')";
-	mysql_query($query);*/
+$kjg= "SELECT count FROM usuario where iduser = 7";
+$lel = mysql_query($kjg);
+while($fila = mysql_fetch_array($lel)){
+mysql_query("UPDATE usuario SET count = ".$fila['count']."  + 1 WHERE iduser= 7");
+}
 	?>
 <html lang="es">
 <head>

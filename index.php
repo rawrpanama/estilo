@@ -114,7 +114,7 @@
                       <div class="row">
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-account-circle prefix"></i>
-                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Debe contener por lo menos 6 carácteres" pattern=".{6,}" required title="Debe contener como minímo 6 caractéres" required="required">
+                          <input type="text" id="user" name="user"  class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="It must contain at least 6 characters" pattern=".{6,}" required title="It must contain at least 6 characters" required="required">
                           <label for="user">User</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
-                          <input type="password" id="pass1" name="pass1" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Deberías usar letras, números y símbolos" required="required" onkeyup="pass(); return false;">
+                          <input type="password" id="pass1" name="pass1" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="You must use letters, numbers and symbols" required="required" onkeyup="pass(); return false;">
                           <label for="pass1">Password</label>
                         </div>
                         <div class="input-field col s12 m6">
@@ -139,25 +139,25 @@
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-lock prefix"></i>
-                          <input type="password" id="pass2" name="pass2" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Repite tu contraseña" required="required" onkeyup="pass(); return false;">
+                          <input type="password" id="pass2" name="pass2" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Repype your Password" required="required" onkeyup="pass(); return false;">
                           <label for="pass2">Confirm Password</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-communication-phone prefix"></i>
-                          <input type="text" id="cel" name="cel" class="validate" required="required" onkeypress="return num(event)">
+                          <input type="text" onkeyup="mascara(this,'-',uno,true)" id="cel" name="cel" class="validate" required="required" onkeypress="return num(event)" maxlength="9">
                           <label for="cel">Phone</label>
                         </div>
                         <div class="input-field col s12 m6">
                           <i class="mdi-action-credit-card prefix"></i>
-                          <input type="text" id="dui" name="dui" class="validate" required="required" onkeypress="return num(event)">
-                          <label for="dui">ID</label>
+                          <input type="text" onkeyup="mascara(this,'-',dos,true)" id="dui" name="dui" class="validate" required="required" onkeypress="return num(event)" maxlength="10">
+                          <label for="dui">DUI</label>
                         </div>
                       </div>
 					  </div>
                       <blockquote id="msg"></blockquote>
 
                 <div class="modal-footer">
-                  <button class="waves-effect waves-green btn-flat" type="submit">Registrer
+                  <button class="waves-effect waves-green btn-flat" type="submit">Register
                   <i class="mdi-content-send right"></i>
                 </button>
                 </form>
@@ -185,17 +185,17 @@
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/031790.jpg">
           <h5><span class="am"></span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita repudiandae incidunt facilis corporis! Accusamus in itaque doloremque earum quod enim sunt mollitia, illo laboriosam ipsa nobis voluptatem, nisi laudantium aut.</p>
+          <p>No hizo nada</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20130215.jpg">
           <h5><span class="mp"></span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda beatae incidunt velit blanditiis quis, commodi saepe mollitia quo enim, dolor unde repudiandae quas, inventore ut? Perspiciatis, aut. Incidunt, commodi, non.</p>
+          <p>Se echo los mantenimientos y lo demas de la pagina</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20120117.jpg">
           <h5><span class="cm"></span></h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt amet, quibusdam nesciunt nihil aliquid reiciendis magnam, saepe dolores porro doloribus harum et, rerum temporibus ratione pariatur! Sed, alias nam dolore.</p>
+          <p>Se escho todo el diseño 3D y es el mas vergon de los 3</p>
           </div>
         </div>
       </div>
@@ -215,6 +215,47 @@
               msg.innerHTML="";
             }
           };
+        </script>
+        <script type="text/javascript">
+  var uno = new Array(4,4);
+  var dos = new Array(8,1);
+      function mascara(d,sep,pat,nums){
+          if(d.valant != d.value){
+              val = d.value
+              largo = val.length
+              val = val.split(sep)
+              val2 = ''
+              for(r=0;r<val.length;r++){
+                  val2 += val[r]
+              }
+              if(nums){
+                  for(z=0;z<val2.length;z++){
+                      if(isNaN(val2.charAt(z))){
+                          letra = new RegExp(val2.charAt(z),"g")
+                          val2 = val2.replace(letra,"")
+                      }
+                  }
+              }
+              val = ''
+              val3 = new Array()
+              for(s=0; s<pat.length; s++){
+                  val3[s] = val2.substring(0,pat[s])
+                  val2 = val2.substr(pat[s])
+              }
+              for(q=0;q<val3.length; q++){
+                  if(q ==0){
+                    val = val3[q]
+                  }else{
+                      if(val3[q] != ""){
+                          val += sep + val3[q]
+                      }
+                  }
+              }
+                  d.value = val
+                  d.valant = val
+          }
+}
+</script>
         </script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>

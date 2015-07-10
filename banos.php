@@ -25,70 +25,70 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble7.png">
+              <img src="img/muebles/mueble3.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>Simple and practical stand for bathrooms, has 5 spaces in vertical, 2 drawers and 2 empty spaces horizontally.</p>
+              <p>Small piece of furniture for the bathroom, with a horizontal drawer  and two doors in vertical, all with handles, with a texture of Melamine color Wengue Teak.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble7.php">3D</a>
+              <a class="green-text" href="3D/mueble3.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/prueba6.png">
+              <img src="img/muebles/mueble14txt2.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>Practical and simple stand for bathrooms, has 1 spaces in horizontally.</p>
+              <p>Simple for bathroom furniture, with 4 drawers, 2 large and two small, with handles, with a texture of Melamine Color Birch.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble9.php">3D</a>
+              <a class="green-text" href="3D/mueble14.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble11txt3.png">
+              <img src="img/muebles/mueble16txt7.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>Practical and simple stand for bathrooms, has 4 spaces horizontally and 4 drawers in horizontal.</p>
+              <p>Simple for bathroom furniture, with 4 drawers, 4 doors, with handles, with a texture of Melamine Color Fresno.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble11.php">3D</a>
+              <a class="green-text" href="3D/mueble16.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble12txt5.png">
+              <img src="img/muebles/mueble17txt2.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
-              <p>Practical and simple stand for bathrooms, has 3 shelves in horizontally.</p>
+              <p>Practical and simple stand for bathrooms, has 2 drawers with a texture of Melamine Color Birch.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble13.php">3D</a>
+              <a class="green-text" href="3D/mueble17.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble13txt2.png">
+              <img src="img/muebles/mueble15txt2.png">
               <span class="card-title">Furniture</span>
             </div>
             <div class="card-content">
-              <p>Practical and simple stand for bathrooms, also has 2 drawers and shelves in a horizontally.</p>
+              <p>Simple for bathroom furniture, with 2 drawers, 2 doors, with handles, with a texture of melamine Color Birch.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble12.php">3D</a>
+              <a class="green-text" href="3D/mueble15.php">3D</a>
             </div>
           </div>
         </div>

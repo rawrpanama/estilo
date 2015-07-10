@@ -1,8 +1,19 @@
+<?php
+    if (isset($_SESSION['suser'])) {
+      $id = $_SESSION['suser'];
+    }
+    $hol = "SELECT count FROM usuario where iduser=$id";
+    $al = mysql_query($hol);
+
+    while($fila=mysql_fetch_array($al)){
+        $contador = $fila['count'];
+    }
+?>
 <div class="collection col s12 m2" style="background-color: #90CAF9;">
  <a href="adusuarios.php" class="collection-item black-text waves-effect"><i class="material-icons">contacts</i>User maintenance</a>
  <a href="ad-muebles.php" class="collection-item black-text waves-effect"><i class="material-icons">store</i>See furnitures</a>
  <a href="ad-new-user.php" class="collection-item black-text waves-effect"><i class="material-icons">perm_identity</i>Add new user</a>
  <a href="ad-new-material.php" class="collection-item black-text waves-effect"><i class="material-icons">polymer</i>Add new material</a>
- <a href="ad-ver-reser.php" class="collection-item black-text waves-effect"><i class="material-icons">done</i>Reservations</a>
+ <a href="ad-ver-reser.php" class="collection-item black-text waves-effect"><i class="material-icons">done</i><?php if($contador!=0){ ?><span class="new badge"><?php echo $contador;?></span><?php }else{echo "";}?>Reservations</a>
  <a href="reportes.php" class="collection-item black-text waves-effect"><i class="material-icons">reorder</i>Reports</a>
 </div>

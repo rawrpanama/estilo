@@ -53,28 +53,28 @@ include('unavbar.html');
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble13txt4.png">
+              <img src="img/muebles/mueble18txt2.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
               <p>This cabinet has two drawers, in which you can place the covered, 2 shelves in horizontal form, and a drawer vertical formS.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble13.php">3D</a>
+              <a class="green-text" href="3D/mueble18txt2.php">3D</a>
             </div>
           </div>
         </div>
         <div class="col s12 m4 offset-m2">
           <div class="card">
             <div class="card-image">
-              <img src="img/muebles/mueble4.png">
+              <img src="img/muebles/mueble19.png">
               <span class="card-title">Stand</span>
             </div>
             <div class="card-content">
               <p>This large cabinet contains 8 drawers, which 3 are horizontally and the other 5 in vertical.</p>
             </div>
             <div class="card-action">
-              <a class="green-text" href="3D/mueble4txt2.php">3D</a>
+              <a class="green-text" href="3D/mueble19.php">3D</a>
             </div>
           </div>
         </div>

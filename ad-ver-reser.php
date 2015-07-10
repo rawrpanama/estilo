@@ -4,10 +4,9 @@ if (isset($_SESSION['suser']) && $_SESSION['type'] == "admin") {
   $id = $_SESSION['suser'];
 include("php/conexion.php");
 conexion();
-
+mysql_query("UPDATE usuario SET count = 0 WHERE iduser=7");
 $consulta = 'SELECT * FROM reserva';
 $result =mysql_query($consulta);
-
 ?>
 <!doctype html>
 <html lang="es">

@@ -2,8 +2,8 @@
 session_start();
 if (isset($_SESSION['suser'])) {
   $id = $_SESSION['suser'];
-$con = mysql_connect('127.0.0.1', 'root','') or die('Error en el servidor');
-mysql_select_db('Estilo');
+  include("../php/conexion.php");
+  conexion();
 $mbid=1;
 $q = mysql_query("SELECT vis FROM mueble WHERE idmueble='".$mbid."'");
 $a = mysql_fetch_array($q);
@@ -24,13 +24,13 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		         <li>
 		             <p class="flow-text black-text center">Texturas</p>
 		            <ul >
-		                <a id="mueble1" href="mueble3.php"><img class="responsive-img" src="../img/materiales/madera.jpg" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble2" href="mueble3txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble3" href="mueble3txt3.php"><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble4" href="mueble3txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble5" href="mueble3txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble6" href="mueble3txt6.php"><img class="responsive-img" src="../img/materiales/textura6.png" style="widht: 25px; Height: 50px;"></a>
-		                <a id="mueble7" href="mueble3txt7.php"><img class="responsive-img" src="../img/materiales/textura7.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble1" href="mueble15.php"><img class="responsive-img" src="../img/materiales/madera.jpg" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble2" href="mueble15txt2.php"><img class="responsive-img" src="../img/materiales/textura2.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble3" href="mueble15txt3.php"><img class="responsive-img" src="../img/materiales/textura3.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble4" href="mueble15txt4.php"><img class="responsive-img" src="../img/materiales/textura4.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble5" href="mueble15txt5.php"><img class="responsive-img" src="../img/materiales/textura5.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble6" href="mueble15txt6.php"><img class="responsive-img" src="../img/materiales/textura6.png" style="widht: 25px; Height: 50px;"></a>
+		                <a id="mueble7" href="mueble15txt7.php"><img class="responsive-img" src="../img/materiales/textura7.png" style="widht: 25px; Height: 50px;"></a>
 		            </ul>
 		         </li>
 		      </ul>
@@ -47,7 +47,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		<script>
 
 
-		   var container;
+		    var container, stats;
 		    var camera, controls, scene, renderer;
 
 		    init();
@@ -60,7 +60,7 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		        //******************************************************************************************************
 		        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
 
-		        camera.position.z=250;
+		        camera.position.z=500;
 		     function onWindowResize() {
 
 				windowHalfX = window.innerWidth / 2;
@@ -72,8 +72,6 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 				renderer.setSize( window.innerWidth, window.innerHeight );
 
 			}
-
-
 		        //******************************************************************************************************
 		        controls = new THREE.TrackballControls(camera);
 		        controls.movementSpeed = 200;
@@ -93,14 +91,16 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		        scene.add(directionalLight2);
 		        //******************************************************************************************************
 
-		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/madera.jpg') });
+		        var cuboMaterial = new THREE.MeshPhongMaterial({map: THREE.ImageUtils.loadTexture('../img/materiales/textura6.png') });
+		        cuboMaterial.needsUpdate=true;
 		        loader = new THREE.JSONLoader();
-		        loader.load('baño1.js', function (geometry) {
+		        loader.load('baño3.js', function (geometry) {
 		            mesh = new THREE.Mesh(geometry, cuboMaterial);
 		            mesh.scale.z = 25;
 		            mesh.scale.x = 25;
 		            mesh.scale.y = 25;
 		            mesh.id = "sillon";
+		            mesh.needsUpdate=true;
 		            scene.add(mesh);
 		        });
 
@@ -119,16 +119,17 @@ mysql_query("UPDATE mueble SET vis='".$count."' WHERE idmueble='".$mbid."'");
 		    }
 
 		</script>
-		   <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+
+	</body>
+	<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
 		      <a class="btn-floating btn-large red">
 		      <i class="large mdi-action-settings"></i>
 		      </a>
 		    <ul>
-		      <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Atrás"><i class="large mdi-hardware-keyboard-backspace"></i></a></li>
-		      <li><a href="reser.php" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reservar"><i class="large mdi-editor-attach-file"></i></a></li>
+		      <li><a href="" class="btn-floating green btn tooltipped" data-position="left" data-delay="50" data-tooltip="Go back"><i class="large mdi-hardware-keyboard-backspace"></i></a></li>
+		      <li><a href="../reser.php?m=1" class="btn-floating blue tooltipped" data-position="left" data-delay="50" data-tooltip="Reserve"><i class="large mdi-editor-attach-file"></i></a></li>
 		    </ul>
 		  </div>
-	</body>
 </html>
  <?php
 }else{
