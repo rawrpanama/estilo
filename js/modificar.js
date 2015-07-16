@@ -21,12 +21,10 @@ $(document).ready(function(){
 			Id:$(this).attr('data-id'),
 			User:usuario,
             Name:nombre,
-			Ape:apellido,
-            Pass:pass,
+			      Ape:apellido,
             Correo:correo,
             Telefono:telefono,
             Dui:dui,
-            Tipo:tipo
 		},function(e){
 			alert(e);
 		});

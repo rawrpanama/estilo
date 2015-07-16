@@ -185,17 +185,14 @@
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/031790.jpg">
           <h5><span class="am"></span></h5>
-          <p>No hizo nada</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20130215.jpg">
           <h5><span class="mp"></span></h5>
-          <p>Se echo los mantenimientos y lo demas de la pagina</p>
           </div>
           <div class="col s4">
           <img class="img-responsive circle" style="width:85%; height: 50%;"src="img/20120117.jpg">
           <h5><span class="cm"></span></h5>
-          <p>Se escho todo el diseño 3D y es el mas vergon de los 3</p>
           </div>
         </div>
       </div>

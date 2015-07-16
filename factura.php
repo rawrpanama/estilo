@@ -9,13 +9,20 @@ if (isset($_SESSION['suser'])) {
   for ($i=0; $i <count($car) ; $i++) {
     $total = $car[$i]['price']*$car[$i]['quanti'];
     $fecha = date('Y/m/d');
-    $fecha_entre = "2015-07-23";
-    $l = mysql_query("INSERT INTO reserva (total, fecha_ordenado, fecha_entrega, img, iduser, idmueble, estado, orden, canti) values ('".$total."','".$fecha."', '".$fecha_entre."', '".$car[$i]['image']."', '".$id."', '".$car[$i]['id']."', 'queued', '".$cod."', '".$car[$i]['quanti']."')") or die(mysql_error());
+    $fecha_entre = "2015-07-24";
+    $fecha_p = $fecha+5;
+    $fecha_p = "2015-07-20";
+    $l = mysql_query("INSERT INTO reserva (total, fecha_ordenado, fecha_entrega, img, iduser, idmueble, estado, orden, canti, fecha_p) values ('".$total."','".$fecha."', '".$fecha_entre."', '".$car[$i]['image']."', '".$id."', '".$car[$i]['id']."', 'queued', '".$cod."', '".$car[$i]['quanti']."','".$fecha."')") or die(mysql_error());
+    $kjg= "SELECT count FROM usuario where iduser = 7";
+    $lel = mysql_query($kjg);
+    while($fila = mysql_fetch_array($lel)){
+    mysql_query("UPDATE usuario SET count = ".$fila['count']."  + 1 WHERE iduser= 7");
   }
+}
 if ($l == true) {
   require_once("php/dompdf/dompdf_config.inc.php");
   $codigoHTML='
-<!doctype html">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,34 +36,33 @@ if ($l == true) {
     <table width="95%" border="1">
       <tr>
         <td bgcolor="#0099FF"><strong>ID</strong></td>
-        <td bgcolor="#0099FF"><strong>Name</strong></td>
+        <td bgcolor="#0099FF"><strong>ID-furniture</strong></td>
         <td bgcolor="#0099FF"><strong>Delivered date</strong></td>
         <td bgcolor="#0099FF"><strong>Price($)</strong></td>
         <td bgcolor="#0099FF"><strong>Quantity</strong></td>
         <td bgcolor="#0099FF"><strong>Subtotal($)</strong></td>
       </tr>';
 
-        $consulta=mysql_query("SELECT * FROM reserva WHERE orden ='".$cod."'") or die(mysql_error());
-        while($dato=mysql_fetch_array($consulta)){
-          $q=mysql_query("SELECT nombre FROM mueble WHERE idmueble=".$dato['idmueble']) or die(mysql_error());
-          $w=mysql_fetch_array($q);
-          $idmueble = $w['nombre'];
-          $e=mysql_query("SELECT precio FROM mueble WHERE idmueble=".$dato['idmueble']) or die(mysql_error());
-          $r=mysql_fetch_array($e);
-          $precio = $r['precio'];
+        $query = mysql_query("SELECT * FROM reserva WHERE orden ='".$cod."'");
+        while($row=mysql_fetch_array($query)){
+        /*  $q= mysql_query("SELECT nombre FROM furniture WHERE idmueble=".$row['idmueble']) or die(mysql_error());
+          $w= mysql_fetch_array($q);
+          $name = $w['nombre'];
+          $e= mysql_query("SELECT precio FROM furniture WHERE idmueble=".$row['idmueble']) or die(mysql_error());
+          $r= mysql_fetch_array($e);
+          $precio = $r['precio'];*/
 $codigoHTML.='
       <tr>
-        <td>'.$dato['orden'].'</td>
-        <td>'.$idmueble.'</td>
-        <td>'.$dato['fecha_entrega'].'</td>
-        <td>'.$precio.'</td>
-        <td>'.$dato['cantidad'].'</td>
-        <td>'.$dato['total'].'</td>
+        <td>'.$row['orden'].'</td>
+        <td>'.$row['idmueble'].'</td>
+        <td>'.$row['fecha_entrega'].'</td>
+        <td>'.$total.'</td>
+        <td>'.$row['canti'].'</td>
+        <td>'.$row['total'].'</td>
       </tr>';
       }
 $codigoHTML.='
     </table>
-    <p>Por favor llevar esté comprobante de su reserva*</p>
 </div>
 </body>
 </html>';

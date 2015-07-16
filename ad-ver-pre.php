@@ -20,14 +20,14 @@ $result = mysql_query($consulta);
  <?php
 include('navbar.html');
 while ($row = mysql_fetch_array($result)) {
-  $sql = mysql_query("SELECT * FROM pieza WHERE idmueble=".$mueble);
+  $sql = mysql_query("SELECT * FROM piece WHERE idmueble=".$mueble);
   ?>
   <div class="container">
     <div class="row">
     <center>
     <div class="col s12 m12">
       <img src="<?php echo $row['img'];?>">
-      <p class="text">This is the piece of furniture that will be built. Those are the pieces that the furniture contains: </p>
+      <p class="text">This is the piece of furniture that will be built. These are the pieces that the furniture contains: </p>
       <a href="ad-ver-reser.php" class="waves-effect waves-teal btn-flat green-text">Back</a>
       </div>
       </center>

@@ -54,11 +54,6 @@ if (isset($_SESSION['carro'])) {
     $_SESSION['carro'] = $car;
   }
 }
-$kjg= "SELECT count FROM usuario where iduser = 7";
-$lel = mysql_query($kjg);
-while($fila = mysql_fetch_array($lel)){
-mysql_query("UPDATE usuario SET count = ".$fila['count']."  + 1 WHERE iduser= 7");
-}
 	?>
 <html lang="es">
 <head>
@@ -84,12 +79,12 @@ include('unavbar.html');
           $total = 0;
           $datos = $_SESSION['carro'];
            for($i=0; $i< count($datos); $i++){ ?>
-             <div class="col s12 m4 blue lighten-4" style="border: 1px #2196f3 solid; margin-bottom: 1%; heigh: 150px;">
+             <div id="i" class="col s12 m4 blue lighten-4" style="border: 1px #2196f3 solid; margin-bottom: 1%; heigh: 150px;">
                 <img src="<?php echo $datos[$i]['image']; ?>"class="responsive-img col s12 m12"/>
                 <span class="flow-text"><?php echo $datos[$i]['name']; ?></span><br>
                 <span><?php echo $datos[$i]['type']; ?></span><br>
                 <span><?php echo "$"; echo $datos[$i]['price']; ?></span><br>
-                <span><input type="text" name="nam" value="<?php echo $datos[$i]['quanti'];?>" data-precio="<?php echo $datos[$i]['price']; ?>" data-id="<?php echo $datos[$i]['id']; ?>" class="cantidad"></span><br>
+                <span><input type="text" name="nam" onkeypress="return num(event)" value="<?php echo $datos[$i]['quanti'];?>" data-precio="<?php echo $datos[$i]['price']; ?>" data-id="<?php echo $datos[$i]['id']; ?>" class="cantidad"></span><br>
                 <span class="subtotal<?php echo $datos[$i]['id']; ?>">Subtotal: <?php echo "$"; echo $datos[$i]['quanti']*$datos[$i]['price']; ?></span>
                 <center><a class="eliminar waves-effect btn-flat red-text" data-id="<?php echo $datos[$i]['id'] ?>" href="#">Delete</a></center>
             </div>
@@ -116,7 +111,7 @@ include('unavbar.html');
                 var id=$(this).attr('data-id');
                 var precio=$(this).attr('data-precio');
                 var cantidad=$(this).val();
-                $(this).parentsUntil('.col s12 m4 blue lighten-4s').find('.subtotal'+id).text('Subtotal: $'+(precio*cantidad));
+                $(this).parentsUntil('.col s12 m4 blue lighten-4').find('.subtotal'+id).text('Subtotal: $'+(precio*cantidad));
                 $.post('./php/modify.php',{
                   id:id,
                   price:precio,
@@ -130,18 +125,19 @@ include('unavbar.html');
            $(".eliminar waves-effect btn-flat red-text").click(function(e){
             		e.preventDefault();
             		var id=$(this).attr('data-id');
-            		$(this).parentsUntil('.col s12 m4 blue lighten-4s').remove();
-            		$.post('php/delete.php',{
+            		$(this).parentsUntil('#i').remove();
+            		$.post('./php/delete.php',{
             			id: id
             		},function(a){
             			if (a=='0') {
-            				location.href="reservar.php";
+            				location.href="index.php";
             			};
             		});
             	});
             }
   $(document).on('ready',inicio);
       </script>
+      <script type="text/javascript" src="js/validaciones.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
       <script type="text/javascript" src="js/inicio.js"></script>
 </body>
